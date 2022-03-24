@@ -1,10 +1,10 @@
-import './App.css';
-
-function App() {
+import React from 'react'
+import Button from '@mui/material/Button';
+export default function App() {
   return (
-    <div className="App">
+    <div>
+      App <br />
+      <Button variant="contained"> Press me </Button> 
     </div>
-  );
+  )
 }
-
-export default App;
