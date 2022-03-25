@@ -1,9 +1,18 @@
-import './App.css';
+import SectionTwo from './Sections/SectionTwo';
+import Whyzummit from './Sections/Whyzummit';
+import Contact from './Sections/ContactForm'
+
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+    {/* Section Two */}
+    <SectionTwo />
+    {/* Section Five */}
+    <Whyzummit />
+    {/* Contact Section */}
+    <Contact />
+    </>
   );
 }
 
