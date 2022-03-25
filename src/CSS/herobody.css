@@ -1,0 +1,27 @@
+.hero {
+  background-color: #081F4A;
+  padding-top: 5%;
+}
+
+.hero_image {
+  background-image: url("../Images/Heroimage.png");
+  height: 70vh;
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 100%;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero_span{
+    display: flex;
+    flex-direction: row-reverse;
+}
