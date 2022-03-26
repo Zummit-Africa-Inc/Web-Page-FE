@@ -11,9 +11,10 @@ export function PrimaryHeader({children, pbSize}) {
   )
 }
 
-export function Header({children, textSize}) {
+export function Header({children, textSize, textalign,py}) {
+  console.log(py);
     return (
-      <Typography variant={textSize} component={textSize} sx={{py: '1rem'}} >
+      <Typography variant={textSize} component={textSize} sx={{py:'1rem', textAlign:`${textalign}`? `${textalign}`: `left`}} >
           {children}
       </Typography>
     )
