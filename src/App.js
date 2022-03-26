@@ -10,7 +10,7 @@ function App() {
 
       {/* Section Two */}
       <SectionTwo />
-      
+
       {/* Section Three to be done by ThankGod */}
 
       {/* Section Four */}
