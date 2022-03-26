@@ -1,5 +1,6 @@
 import './App.css';
 import Hero from "./Section/Hero"
+import SectionFour from './Section/SectionFour';
 import SectionTwo from './Section/WhyZummit';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       {/* Section Three to be done by ThankGod */}
 
       {/* Section Four */}
+      <SectionFour />
     </>
   );
 }
