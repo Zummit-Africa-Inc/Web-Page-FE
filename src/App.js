@@ -4,7 +4,8 @@ import Hero from "./Section/Hero"
 function App() {
   return (
     <div className="App">
-      <Hero/>
+      <Hero />
+
     </div>
   );
 }

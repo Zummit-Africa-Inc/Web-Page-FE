@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <AppBar>
-        <Toolbar sx={{ backgroundColor: "#081F4A" }}>
+        <Toolbar sx={{ backgroundColor: "#081F42" }}>
           <img className="navbar_image" src={Logo} alt="Logo" />
           {isMatch ? (
             <Box sx={{ marginLeft: "auto" }}>
