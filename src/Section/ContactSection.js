@@ -7,7 +7,8 @@ import '../CSS/contactSection.css'
 
 export default function ContactSection() {
     const style={
-        formControl: {margin: '1.5rem .2rem'}
+        formControl: {margin: '1.5rem .2rem'},
+        label:{display: 'inline-block', paddingBottom:'.4rem'}
     }
   return (
     <Box component='section' 
@@ -20,22 +21,22 @@ export default function ContactSection() {
         </Header>
     <Box className='contact-section'>
         <Box style={style.formControl}>
-            <label htmlFor="fullnames">Full name</label>
+            <label htmlFor="fullnames" style={style.label}>Full name</label>
             <TextField id="filled-basic" label="Full name" variant="filled" fullWidth style={{backgroundColor: 'white'}} size="small" />
         </Box>
         <Box style={style.formControl}>
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email" style={style.label}>Email Address</label>
             <TextField id="filled-basic" label="Email Address" variant="filled" fullWidth style={{backgroundColor: 'white'}} size="small" />
         </Box>
         <Box style={style.formControl}>
-            <label htmlFor="company_name">Company Name</label>
+            <label htmlFor="company_name" style={style.label}>Company Name</label>
             <TextField id="filled-basic" label="Company Name" variant="filled" fullWidth style={{backgroundColor: 'white'}} size="small" />
         </Box>
         <Box style={style.formControl}>
-            <label htmlFor="company_name">Message</label>
+            <label htmlFor="company_name" style={style.label}>Message</label>
             <TextField id="filled-basic" label="Message" variant="filled" fullWidth multiline rows="5" style={{backgroundColor: 'white'}}/>
         </Box>
-        <PrimaryButton color= '#09090B' bgcolor='#FFEA00'>Get a demo</PrimaryButton> 
+        <PrimaryButton color= '#09090B' bgcolor='#FFEA00' margin="5rem auto">Get a demo</PrimaryButton> 
     </Box>
         
     </Box>
