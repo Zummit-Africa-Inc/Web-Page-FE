@@ -18,7 +18,7 @@ const DrawerComponent = () => {
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
           {PAGES.map((page, index) => (
-            <ListItemButton onClick={() => setOpenDrawer(false)}>
+            <ListItemButton key={{index}} onClick={() => setOpenDrawer(false)}>
               <ListItemIcon>
                 <ListItemText>{page}</ListItemText>
               </ListItemIcon>

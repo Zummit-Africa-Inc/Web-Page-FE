@@ -16,7 +16,7 @@ import {
 
 const Header = () => {
   const PAGES = ["About", "Services", "Contact"];
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
@@ -32,7 +32,6 @@ const Header = () => {
           ) : (
             <Tabs
               sx={{ marginLeft: "auto" }}
-              textColor="white"
               value={value}
               onChange={(e, value) => setValue(value)}
               indicatorColor="primary"
@@ -40,7 +39,7 @@ const Header = () => {
               {PAGES.map((page, index) => (
                 <Tab
                   key={index}
-                  sx={{ textTransform: "capitalize", marginLeft: "50px" }}
+                  sx={{ textTransform: "capitalize", marginLeft: "50px" , color:"white"}}
                   label={page}
                 ></Tab>
               ))}
