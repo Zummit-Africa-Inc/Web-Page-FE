@@ -1,6 +1,7 @@
 import {Box, Grid} from '@mui/material'
 import { Paragraph, Header } from '../Component/Typography'
 import PrimaryButton from '../Component/Button'
+import  ReactLogo from '../Images/arrow-next.svg';
 
 export default function SectionTwo() {
   return (
@@ -17,7 +18,9 @@ export default function SectionTwo() {
                 <Paragraph>
                     We are inspired by the innate will to make things easier, better and faster. For organizations to leverage A.I to build solutions, they need a team of ML engineers. This takes time and a lot of resources to build. Zummit Africa comes to the aid by helping your organization build your A.I solutions, so you can spend less time and money worrying about the problem, while we focus on providing the solution and improving your busness as you want. 
                 </Paragraph>
-                <PrimaryButton color= '#09090B' bgcolor='#FFEA00'>Contact us</PrimaryButton> 
+                <PrimaryButton color= '#09090B' bgcolor='#FFEA00'>
+                    Contact us <img src={ReactLogo} alt="React Logo" style={{paddingLeft:'.5rem'}}/>
+                </PrimaryButton> 
             </Grid>
         </Grid>
     </Box>
