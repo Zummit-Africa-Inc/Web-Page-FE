@@ -5,11 +5,9 @@ import DrawerComponent from "../Component/DrawerComponent";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Box,
   Tabs,
   Tab,
-  Button,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -22,7 +20,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <AppBar>
-        <Toolbar sx={{ backgroundColor: "#081F42" }}>
+        <Toolbar sx={{ backgroundColor: "#081F4A" }}>
           <img className="navbar_image" src={Logo} alt="Logo" />
           {isMatch ? (
             <Box sx={{ marginLeft: "auto" }}>
