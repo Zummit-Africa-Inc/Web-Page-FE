@@ -35,15 +35,13 @@ const Header = () => {
               onChange={(e, value) => setValue(value)}
               indicatorColor="primary"
             >
-              {PAGES.map((page, index) => 
-              (
+              {PAGES.map((page, index) => (
                 <Tab
                   key={index}
                   sx={{ textTransform: "capitalize", marginLeft: "50px" }}
                   label={page}
                 ></Tab>
-              )
-              )}
+              ))}
               <Btx spacing={{ marginLeft: "130px" }} variant="outlined">
                 <span style={{ color: "white", textTransform: "capitalize" }}>
                   Request a demo

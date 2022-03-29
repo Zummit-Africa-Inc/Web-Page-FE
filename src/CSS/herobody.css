@@ -1,5 +1,5 @@
 .hero {
-  background-color: #081F4A;
+  background-color: #081f4a;
   padding-top: 5%;
 }
 
@@ -8,7 +8,7 @@
   height: 70vh;
   background-position: 90% 0;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   width: 100%;
 }
 
@@ -21,15 +21,13 @@
   color: white;
 }
 
-.hero_span{
-    display: flex;
-    flex-direction: row-reverse;
+.hero_span {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-
-
 .hero_md {
-  background-color: #081F4A;
+  background-color: #081f4a;
   padding-top: 25%;
 }
 
@@ -42,14 +40,13 @@
   color: white;
 }
 
-.hero_heading_md{
-width: 280px;
-font-family: 'Lato';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 52px;
-
+.hero_heading_md {
+  width: 280px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 52px;
 }
 
 .hero_image_md {
@@ -57,6 +54,6 @@ line-height: 52px;
   height: 50vh;
   background-position: 90% 0;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   width: 100%;
 }
