@@ -13,10 +13,9 @@ export default function SectionFour() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   let customTextAlign = isMobile ? "center" : "left";
-  let customIconAlign = isMobile ? "auto" : "left";
+  let customIconAlign = isMobile ? "0 auto" : "auto 0";
 
   return (
-    
     <Box
       component="section"
       sx={{ py: "4rem", backgroundColor: "#DEE5EE", color: "#081F4A" }}
@@ -27,7 +26,7 @@ export default function SectionFour() {
       </PrimaryHeader>
       <Grid container columnSpacing={6} rowSpacing={5} display={"flex"}>
         <Grid item xs={12} sm={6} textAlign={customTextAlign}>
-          <Icon mx={customIconAlign}>
+          <Icon margin={customIconAlign}>
             <img src={SaveIcon} alt="save cost icon" />
           </Icon>
           <Header textSize={"h6"}>Save cost</Header>
@@ -38,7 +37,7 @@ export default function SectionFour() {
           </Paragraph>
         </Grid>
         <Grid item xs={12} sm={6} textAlign={customTextAlign}>
-          <Icon mx={customIconAlign}>
+          <Icon margin={customIconAlign}>
             <MoreTimeOutlinedIcon />
           </Icon>
           <Header textSize={"h6"}>Save time</Header>
@@ -49,7 +48,7 @@ export default function SectionFour() {
           </Paragraph>
         </Grid>
         <Grid item xs={12} sm={6} textAlign={customTextAlign}>
-          <Icon mx={customIconAlign}>
+          <Icon margin={customIconAlign}>
             <SupportAgentIcon />
           </Icon>
           <Header textSize={"h6"}>Customer service</Header>
@@ -60,7 +59,7 @@ export default function SectionFour() {
           </Paragraph>
         </Grid>
         <Grid item xs={12} sm={6} textAlign={customTextAlign}>
-          <Icon mx={customIconAlign}>
+          <Icon margin={customIconAlign}>
             <FavoriteBorderOutlinedIcon />
           </Icon>
           <Header textSize={"h6"}>Service delivery</Header>

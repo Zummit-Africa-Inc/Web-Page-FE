@@ -1,7 +1,7 @@
 import React from 'react'
 import {Box} from '@mui/material'
 
-export default function Icon({children}) {
+export default function Icon({children,margin}) {
   return (
     <Box 
         sx={{
@@ -12,7 +12,8 @@ export default function Icon({children}) {
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06)',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            margin: `${margin}`
         }}>
         
             {children}
