@@ -5,12 +5,10 @@ import { Button } from '@mui/material'
 export default function PrimaryButton({children, bgcolor, color,isDesktop, margin="5rem 0 0 0"}) {
   // Media Query to be applied on based on Screen Size
   let screenSize = isDesktop ? `${margin}` : "2rem auto";
-  
+
   return (
     <Button variant="contained" display='flex' size= 'large' sx={{backgroundColor:`${bgcolor}`, color:`${color}`, display: 'flex', m: `${screenSize}`, "&:hover": {
-      //you want this to be the same as the backgroundColor above
-
-      //YES, because no backgroundColor on hover was specified during the mockup design.
+      //background color on hover can be changed here by passing bgcolor as props via the component
       backgroundColor: `${bgcolor}`
   }}}>
       {children}
