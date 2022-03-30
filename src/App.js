@@ -1,7 +1,9 @@
 import './App.css';
+import ContactSection from './Section/ContactSection';
 import Hero from "./Section/Hero"
 import SectionFour from './Section/SectionFour';
 import SectionTwo from './Section/WhyZummit';
+
 
 
 function App() {
@@ -12,13 +14,17 @@ function App() {
       <Hero/> 
       {/* Section One to be done by ThankGod */}
 
-      {/* Section Two */}
+      {/* Section Two by Joshua*/}
       <SectionTwo /> 
 
       {/* Section Three to be done by Zainab */}
 
-      {/* Section Four */}
+      {/* Section Four by Joshua*/}
       <SectionFour />
+
+      {/* Contact Section by Joshua*/}
+      <ContactSection />
+
     </>
   );
 }

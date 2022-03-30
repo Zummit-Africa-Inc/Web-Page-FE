@@ -5,11 +5,9 @@ import DrawerComponent from "../Component/DrawerComponent";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Box,
   Tabs,
   Tab,
-  Button,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
