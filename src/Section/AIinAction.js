@@ -16,7 +16,7 @@ export default function AIinAction() {
   return (
     <Box component='section' 
         sx={{ py: '4rem', backgroundImage: 'url(../Images/pattern_herringbone.png)', color: '#FFFFFF'}}
-        px={{xs:2, sm:3, md:'9rem'}}
+        px={{xs:2, sm:3, md:'6rem', lg:'9rem', xl:'15rem'}}
     >
         <PrimaryHeader pbSize='0'>A.I in action</PrimaryHeader>
         <Header textSize='h6' textAlign='center'>

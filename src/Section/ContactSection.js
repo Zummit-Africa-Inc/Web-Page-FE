@@ -18,7 +18,7 @@ export default function ContactSection() {
   return (
     <Box component='section' 
         sx={{ py: '4rem', backgroundColor: '#DEE5EE', color: '#081F4A'}}
-        px={{xs:3, sm:4, md:'9rem'}}
+        px={{xs:3, sm:4, md:'9rem', xl:'18rem'}}
     >
         <PrimaryHeader pbSize='1rem'>Let’s give your business that head start</PrimaryHeader>
         <Header textSize='h6' textAlign='center'>

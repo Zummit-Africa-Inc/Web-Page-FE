@@ -3,7 +3,7 @@ import { Button } from '@mui/material'
 
 
 export default function PrimaryButton({children, bgcolor, color,isDesktop, margin="5rem 0 0 0"}) {
-  // Media Query to be applied on based on Screen Size
+  // Check to know if its in desktop or mobile phone screen and apply margin based on Screen Sizes
   let screenSize = isDesktop ? `${margin}` : "2rem auto";
 
   return (
