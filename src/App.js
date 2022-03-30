@@ -3,7 +3,7 @@ import ContactSection from './Section/ContactSection';
 import Hero from "./Section/Hero"
 import SectionFour from './Section/SectionFour';
 import SectionTwo from './Section/WhyZummit';
-import ContactSection from './Section/ContactSection';
+
 
 
 function App() {
