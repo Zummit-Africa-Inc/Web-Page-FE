@@ -1,4 +1,5 @@
 import './App.css';
+import AIinAction from './Section/AIinAction';
 import ContactSection from './Section/ContactSection';
 import Hero from "./Section/Hero"
 import SectionFour from './Section/SectionFour';
@@ -21,6 +22,9 @@ function App() {
 
       {/* Section Four by Joshua*/}
       <SectionFour />
+
+      {/* Section AI in Action by Joshua*/}
+      <AIinAction />
 
       {/* Contact Section by Joshua*/}
       <ContactSection />

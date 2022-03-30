@@ -13,7 +13,7 @@ export default function SectionTwo() {
   return (
     <Box component='section'
         sx={{ py: '6rem', backgroundColor: '#DEE5EE', color: '#081F4A'}}
-        px={{xs:3, sm:4, md:'12rem'}}>
+        px={{xs:3, sm:4, md:'9rem', xl:'18rem'}}>
         <Grid container spacing={2}>
             <Grid item sm={12} md={6}>
                 <Header textSize='h4'>
