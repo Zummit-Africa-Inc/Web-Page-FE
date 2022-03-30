@@ -5,7 +5,6 @@ const Carousel = () => {
   return (
       <div>
           <Slider />
-          <h2>Hello</h2>
     </div>
   )
 }

@@ -6,11 +6,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Box from "@mui/material/Box"
 import { CardActionArea } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import "../CSS/slider.css"
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
       <div
        className="leftarrow"
@@ -71,7 +73,7 @@ function SamplePrevArrow(props) {
 }
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
       <div
           className="rightarrow"
@@ -132,31 +134,19 @@ function SampleNextArrow(props) {
 }
 
 var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 6,
+      slidesToShow: 4,
       slidesToScroll: 1,
-    initialSlide: 0,
-    arrow: false,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
       responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            initialSlide: 0
           }
         },
         {
@@ -170,31 +160,67 @@ var settings = {
 };
 
 
-const SliderComponent = ({items}) => {
+const SliderComponent = ({ items }) => {
+  
+  const useStyles = makeStyles((theme)=>({
+text:{
 
+fontStyle: "normal",
+fontWeight: "400",
+fontSize: "16px",
+lineHeight: "20px",
+
+display: "flex",
+      alignItems: "center",
+color: "#081F4A"
+    },
+    header:{
+
+fontStyle: "normal",
+fontWeight: "700",
+fontSize: "18px",
+lineHeight: "24px",
+
+display: "flex",
+      alignItems: "center",
+color: "#081F4A"
+}
+    
+}));
+
+  const classes = useStyles();
     const sliders = () => {
           return items.map(item => {
               return (
 
+                <Box
+               
+                >
                   
-                  <Card sx={{ maxWidth: 200 }}>
+            <Card sx={{
+                width: 296,
+                height:416
+            }}>
       <CardActionArea>
-        <CardMedia
+         <CardMedia
           component="img"
-          height="140"
+          height="176"
+          width="296"
           image={item.image}
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography className={classes.header}  gutterBottom variant="h5" component="div">
             {item.header}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+                        <br/>
+          <Typography className={classes.text}  color="text.secondary">
            {item.text}
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>
+                  </Card>
+                  </Box>
                
               );
             })
@@ -205,7 +231,7 @@ const SliderComponent = ({items}) => {
     return (
       <div>
         
-        <div style={{ position: "relative", marginTop: "2rem" }}>
+        <div style={{ position: "relative", margin: "4%" }}>
           
           
          

@@ -8,7 +8,7 @@ const Brand = () => {
   return (
     <div className="branditems">
           <Box
-              sx={{ p: 6  }}>
+              c>
         <Typography align="center" variant="h6">
           Supported by some of the world’s most innovative brands
         </Typography>
