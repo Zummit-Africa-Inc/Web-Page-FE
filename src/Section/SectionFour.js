@@ -19,7 +19,7 @@ export default function SectionFour() {
     <Box
       component="section"
       sx={{ py: "4rem", backgroundColor: "#DEE5EE", color: "#081F4A" }}
-      px={{ xs: 3, sm: 4, md: "9rem" }}
+      px={{ xs: 3, sm: 4, md: "9rem", xl:'18rem'}}
     >
       <PrimaryHeader pbSize="3rem">
         Improve services, save cost and scale
