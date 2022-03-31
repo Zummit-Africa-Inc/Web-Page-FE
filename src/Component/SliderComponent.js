@@ -143,7 +143,7 @@ var settings = {
       prevArrow: <SamplePrevArrow />,
       responsive: [
         {
-          breakpoint: 600,
+          breakpoint: 700,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -198,8 +198,8 @@ color: "#081F4A"
                 >
                   
             <Card sx={{
-                width: 296,
-                height:416
+                height:416,
+                marginRight:3,
             }}>
       <CardActionArea>
          <CardMedia
