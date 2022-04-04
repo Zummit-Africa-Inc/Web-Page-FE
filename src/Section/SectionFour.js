@@ -6,7 +6,6 @@ import Icon from "../Component/Icon";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SaveIcon from "../Images/save-icon.png";
-import { textAlign } from "@mui/system";
 
 export default function SectionFour() {
 
