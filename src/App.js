@@ -15,8 +15,7 @@ function App() {
   return (
     <>
     
-      <Hero /> 
-     
+      <Hero/> 
       {/* Section One to be done by ThankGod */}
 
       {/* Section Two by Joshua*/}
