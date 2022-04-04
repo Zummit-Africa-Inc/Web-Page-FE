@@ -3,6 +3,7 @@ import ContactSection from './Section/ContactSection';
 import Hero from "./Section/Hero"
 import SectionFour from './Section/SectionFour';
 import SectionTwo from './Section/WhyZummit';
+import FooterSection from './Section/FooterSection';
 
 
 
@@ -17,13 +18,14 @@ function App() {
       {/* Section Two by Joshua*/}
       <SectionTwo /> 
 
-      {/* Section Three to be done by Zainab */}
-
       {/* Section Four by Joshua*/}
       <SectionFour />
 
       {/* Contact Section by Joshua*/}
       <ContactSection />
+
+      {/* Footer Section to be done by Zainab */}
+      <FooterSection />
 
     </>
   );
