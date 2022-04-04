@@ -7,18 +7,23 @@ import SectionTwo from './Section/WhyZummit';
 import LeverageSection from './Section/LeverageSection';
 import InternshipSection from './Section/InternshipSection';
 
+
+import FooterSection from './Section/FooterSection';
+
+
+
 function App() {
   return (
     <>
-      <Hero />
-
+    
+      <Hero/> 
       {/* Section One to be done by ThankGod */}
 
       {/* Section Two by Joshua*/}
       <SectionTwo />
 
-      <LeverageSection />
-      {/* Section Three to be done by Zainab */}
+      <LeverageSection/>
+      {/* Section Three to be done by Thank God */}
 
       {/* Section Four by Joshua*/}
       <SectionFour />
@@ -29,6 +34,10 @@ function App() {
 
       {/* Contact Section by Joshua*/}
       <ContactSection />
+
+      {/* Footer Section to be done by Zainab */}
+      <FooterSection />
+
     </>
   );
 }
