@@ -4,7 +4,7 @@
 }
 
 .hero_image {
-  background-image: url("../Images/Heroimage.png");
+  background-image: url('../Images/Heroimage.png');
   height: 70vh;
   background-position: 90% 0;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 
 .hero_heading_md {
   width: 280px;
-  font-family: "Lato";
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -50,7 +50,7 @@
 }
 
 .hero_image_md {
-  background-image: url("../Images/Heroimage.png");
+  background-image: url('../Images/Heroimage.png');
   height: 50vh;
   background-position: 90% 0;
   background-repeat: no-repeat;

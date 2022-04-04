@@ -1,6 +1,6 @@
-import React from "react";
-import HeroBody from "../components/herobody";
-import Header from "../components/header";
+import React from 'react';
+import HeroBody from '../components/herobody';
+import Header from '../components/header';
 
 function Hero() {
   return (
@@ -11,4 +11,4 @@ function Hero() {
   );
 }
 
-export default Hero; 
+export default Hero;

@@ -1,16 +1,16 @@
-.leftarrow{
-    position: absolute;
-    margin-top: 7%;
-    cursor: pointer;
-    z-index: 1;   
+.leftarrow {
+  position: absolute;
+  margin-top: 7%;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .rightarrow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 6.3%;
-    margin-right: 2%;
-    cursor: pointer;
-    z-index: 1;   
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 6.3%;
+  margin-right: 2%;
+  cursor: pointer;
+  z-index: 1;
 }

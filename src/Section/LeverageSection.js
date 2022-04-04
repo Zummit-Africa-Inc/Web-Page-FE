@@ -1,12 +1,12 @@
-import React from 'react'
-import Slider from '../components/slider'
+import React from 'react';
+import Slider from '../components/slider';
 
 const Carousel = () => {
   return (
-      <div>
-          <Slider />
+    <div>
+      <Slider />
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;
