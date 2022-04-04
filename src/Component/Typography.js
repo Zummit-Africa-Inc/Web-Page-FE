@@ -15,9 +15,9 @@ let customFontsize = isMobile ? "2.125rem" : "1.9rem";
   )
 }
 
-export function Header({children, textSize, textAlign}) {
+export function Header({children, textSize, textAlign, pady='1rem 0rem 1rem 0rem'}) {
     return (
-      <Typography variant={textSize} component={textSize} sx={{py: '1rem', textAlign: {textAlign}}} >
+      <Typography variant={textSize} component={textSize} sx={{p: `${pady}`, textAlign: {textAlign}}} >
           {children}
       </Typography>
     )
