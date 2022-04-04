@@ -1,6 +1,6 @@
 import React from "react";
 import HeroBody from "../Component/HeroBody";
-import Navbar from "../Component/Navbar";
+// import Navbar from "../Component/Navbar";
 import Header from "../components/header";
 
 function Hero() {
