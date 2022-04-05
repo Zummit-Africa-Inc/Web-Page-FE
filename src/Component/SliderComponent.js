@@ -8,8 +8,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from "@mui/material/Box"
 import { CardActionArea } from '@mui/material';
-import "../CSS/slider.css"
 import { makeStyles } from '@mui/styles';
+import "../CSS/slider.css"
 
 function SamplePrevArrow(props) {
   const { onClick } = props;

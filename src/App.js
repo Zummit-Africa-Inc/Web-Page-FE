@@ -1,4 +1,3 @@
-import React from "react";
 import './App.css';
 import AIinAction from './Section/AIinAction';
 import ContactSection from './Section/ContactSection';
@@ -12,7 +11,7 @@ import FooterSection from './Section/FooterSection';
 
 
 function App() {
-// Testing out git issues
+
   return (
     <>
     
