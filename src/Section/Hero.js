@@ -1,12 +1,11 @@
 import React from "react";
-import HeroBody from "../components/herobody"
-import Header from "../components/header"
-
+import Header from '../Components/header'
+import Herobody from '../Components/herobody'
 function Hero() {
   return (
     <div>
       <Header />
-      <HeroBody />
+      <Herobody />
     </div>
   );
 }
