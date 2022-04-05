@@ -12,7 +12,7 @@ import FooterSection from './Section/FooterSection';
 
 
 function App() {
-
+// Testing out git issues
   return (
     <>
     
