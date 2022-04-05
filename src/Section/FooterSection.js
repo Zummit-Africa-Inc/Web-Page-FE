@@ -31,7 +31,8 @@ export default function FooterSection() {
             <Grid container Spacingcolumn={6} Spacingrow={5}>
                 <Grid item xs={6} lg={4} order={contactOrder} mt={{xs: 3, sm: 4, md: 6, lg: 0}} >
                     <img src={Logo} alt="Zummit Africa Logo" /> 
-                    <Typography display="block" py={1} fontSize={16} fontWeight={500} >256 Chapman Road STE <br/> 105-4, Newark. Newcastle <br/> Delaware, USA.</Typography>
+
+                    <Typography display="block" mt={2} py={1} fontSize={16} fontWeight={500} >256 Chapman Road STE <br/> 105-4, Newark. Newcastle <br/> Delaware, USA.</Typography>
                     <Typography display="block" py={1} fontSize={16} fontWeight={500}>TOJA Southern View Estate, <br/> Lekki - Lagos, Nigeria
                     </Typography>
                         
@@ -39,7 +40,7 @@ export default function FooterSection() {
                     </Typography>
                 </Grid>
                 <Grid item xs={6} lg={2} order={productOrder} >
-                    <Typography display="block" variant="h6" component="h6">
+                    <Typography display="block" py={2} variant="h6" component="h6">
                         Products
                     </Typography>
                     <Link href="/Apis" underline="none" color="#081F4A">
@@ -62,7 +63,7 @@ export default function FooterSection() {
                     </Link>
                 </Grid>
                 <Grid item xs={6} lg={2}  pl={{ xs: '2rem', sm: 4, md: 6, lg:'2rem' }} order={companyOrder}>
-                    <Typography variant="h6" component="h6">
+                    <Typography py={2} variant="h6" component="h6">
                         Company
                     </Typography>
                     <Link href="/About" underline="none" color="#081F4A">
@@ -79,7 +80,7 @@ export default function FooterSection() {
                     </Link>
                 </Grid>
                 <Grid item xs={6} lg={2}   mt={{ xs: '2rem', sm: 4, md: 6, lg: 0}} order={resourcesOrder}>
-                    <Typography variant="h6" component="h6">
+                    <Typography py={2} variant="h6" component="h6">
                         Resources
                     </Typography>
                     <Link href="/Blog" underline="none" color="#081F4A">
@@ -90,7 +91,7 @@ export default function FooterSection() {
                     </Link>
                 </Grid>
                 <Grid item xs={6} lg={2}  mt={{ xs: '2rem', sm: 4, md: 6, lg: 0}} pl={{ xs: '2rem', sm: 4, md: 6,lg:0 }} order={legalOrder}>
-                    <Typography variant="h6" component="h6">
+                    <Typography py={2} variant="h6" component="h6">
                         Legal
                     </Typography>
                     <Link href="/Terms" underline="none" color="#081F4A">
@@ -116,8 +117,6 @@ export default function FooterSection() {
                     <img src={Linkedln} alt="Linkedln" /> 
                     </Box>
                     
-                   
-                   
 
                 </Grid>
                 
