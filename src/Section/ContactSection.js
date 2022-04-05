@@ -1,7 +1,8 @@
 import React from 'react'
-import {PrimaryHeader, Header} from '../Component/Typography'
-import { Box, useMediaQuery, useTheme,TextField} from "@mui/material";
+import {PrimaryHeader} from '../Component/Typography'
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import PrimaryButton from '../Component/Button'
+import { TextField} from '@mui/material';
 import '../CSS/contactSection.css'
 
 export default function ContactSection() {
@@ -10,6 +11,10 @@ export default function ContactSection() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.up("lg"));
     let customWidth = isMobile ? "50%" : "100%";
+    let customFontsize = isMobile ? "2.125rem" : "1.9rem";
+    let customFontsize2 = isMobile ? "1.125rem" : ".9rem";
+    let customPadding = isMobile ? ".5rem 17rem" : "0 1rem";
+    let customFontWeight = isMobile ? "400" : "500";
 
     const style={
         formControl: {margin: '1.5rem .2rem'},
@@ -20,10 +25,10 @@ export default function ContactSection() {
         sx={{ py: '4rem', backgroundColor: '#DEE5EE', color: '#081F4A'}}
         px={{xs:3, sm:4, md:'9rem', xl:'18rem'}}
     >
-        <PrimaryHeader pbSize='1rem'>Let’s give your business that head start</PrimaryHeader>
-        <Header textSize='h6' textAlign='center'>
+        <PrimaryHeader pbSize='1rem' fontSize={customFontsize}>Let’s give your business that head start</PrimaryHeader>
+        <Typography component='h6' variant= 'h6' textAlign='center' p={customPadding} fontSize={customFontsize2} fontWeight={customFontWeight}>
             We’ll show you how Zummit Africa can make your process easier and better
-        </Header>
+        </Typography>
     <Box className='contact-section' sx={{ width: `${customWidth}`, margin: '3rem auto 0 auto'}}>
         <Box style={style.formControl}>
             <label htmlFor="fullnames" style={style.label}>Full name</label>
