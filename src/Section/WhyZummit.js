@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import {Box, Grid} from '@mui/material'
 import { Paragraph, Header } from '../Component/Typography'
 import PrimaryButton from '../Component/Button'
 import  ReactLogo from '../Images/arrow-next.svg';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 export default function SectionTwo() {
     // MaterialUI breakpoints Hook

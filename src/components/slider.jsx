@@ -13,7 +13,7 @@ const Slider = () => {
         <Typography  sx={{fontWeight: 800 , color:"#081F4A"}} align="center" variant="h4">
           Leverage AI & ML in these areas and more
         </Typography>
-      <SliderComponent items={ sliderItem }/> 
+      <SliderComponent items={ sliderItem }/>
       </Box>
       
       
