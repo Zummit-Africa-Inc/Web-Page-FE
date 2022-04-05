@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Grid,TextField,useMediaQuery, useTheme,} from '@mui/material'
 import {PrimaryHeader, Header} from '../Component/Typography'
 import PrimaryButton from '../Component/Button'
+import bgImage from '../Images/pattern_herringbone.png'
 
 export default function AIinAction() {
     // Custom CSS for controlling the inputs and label
@@ -15,7 +16,7 @@ export default function AIinAction() {
 
   return (
     <Box component='section' 
-        sx={{ py: '4rem', backgroundImage: 'url(../Images/pattern_herringbone.png)', color: '#FFFFFF' }}
+        sx={{ py: '4rem', backgroundImage: `url(${bgImage})`, color: '#FFFFFF' }}
         px={{xs:2, sm:3, md:'6rem', lg:'9rem', xl:'15rem'}}
     >
         <PrimaryHeader pbSize='0'>A.I in action</PrimaryHeader>
