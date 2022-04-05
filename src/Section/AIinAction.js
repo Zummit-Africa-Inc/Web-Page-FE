@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, Grid,TextField,useMediaQuery, useTheme,} from '@mui/material'
-import {PrimaryHeader, Header} from '../Component/Typography'
+import { Box, Grid,TextField,useMediaQuery, useTheme,Typography} from '@mui/material'
+import {PrimaryHeader} from '../Component/Typography'
 import PrimaryButton from '../Component/Button'
+import bgImage from '../Images/pattern_herringbone.png'
 
 export default function AIinAction() {
     // Custom CSS for controlling the inputs and label
@@ -15,13 +16,13 @@ export default function AIinAction() {
 
   return (
     <Box component='section' 
-        sx={{ py: '4rem', backgroundImage: 'url(../Images/pattern_herringbone.png)', color: '#FFFFFF' }}
+        sx={{ py: '4rem', backgroundImage: `url(${bgImage})`, color: '#FFFFFF' }}
         px={{xs:2, sm:3, md:'6rem', lg:'9rem', xl:'15rem'}}
     >
         <PrimaryHeader pbSize='0'>A.I in action</PrimaryHeader>
-        <Header textSize='h6' textAlign='center'>
+        <Typography variant='h6' component='h6' textAlign='center' fontWeight='400'>
             Brief demonstration of how A.I works
-        </Header>
+        </Typography>
     <Grid container columnSpacing={6} >
         <Grid item xs={12}  md={6}>
         <Box style={style.formControl}>

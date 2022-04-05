@@ -1,6 +1,6 @@
 import React from "react";
-import HeroBody from "../components/herobody";
-import Header from "../components/header";
+import HeroBody from "../Components/herobody"
+import Header from "../Components/header"
 
 function Hero() {
   return (
