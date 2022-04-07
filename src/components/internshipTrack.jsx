@@ -67,7 +67,7 @@ export default function internshipTracks() {
           '& > :not(style)': {
             m: 5,
             p: 3,
-            width: 414,
+            width: 389,
             height: 354
           }
         }}
