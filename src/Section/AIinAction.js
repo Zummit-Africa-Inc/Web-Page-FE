@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Grid,TextField,useMediaQuery, useTheme,} from '@mui/material'
 import {PrimaryHeader, Header} from '../Component/Typography'
 import PrimaryButton from '../Component/Button'
+import bgImage from '../Images/pattern_herringbone.png'
 
 export default function AIinAction() {
     // Custom CSS for controlling the inputs and label
@@ -15,7 +16,7 @@ export default function AIinAction() {
 
   return (
     <Box component='section' 
-        sx={{ py: '4rem', backgroundImage: 'url(../Images/pattern_herringbone.png)', color: '#FFFFFF' }}
+        sx={{ py: '4rem', backgroundImage: `url(${bgImage})`, color: '#FFFFFF' }}
         px={{xs:2, sm:3, md:'6rem', lg:'9rem', xl:'15rem'}}
     >
         <PrimaryHeader pbSize='0'>A.I in action</PrimaryHeader>
@@ -26,18 +27,18 @@ export default function AIinAction() {
         <Grid item xs={12}  md={6}>
         <Box style={style.formControl}>
             <label htmlFor="company_name" style={style.label}>Enter body text / paragraph</label>
-            <TextField id="filled-basic" label="Body text" variant="filled" fullWidth multiline rows="3" style={{backgroundColor: 'white'}}/>
+            <TextField id="filled-basic" fullWidth multiline rows="3.65" style={{backgroundColor: 'white'}}/>
         </Box>
         <Box style={style.formControl}>
             <label htmlFor="fullnames" style={style.label}>Enter Question</label>
-            <TextField id="filled-basic" label="Question" variant="filled" fullWidth style={{backgroundColor: 'white'}} size="small" />
+            <TextField id="filled-basic" fullWidth style={{backgroundColor: 'white'}} size="small" />
         </Box>
         <PrimaryButton color= '#09090B' bgcolor='#FFEA00' margin="2rem 0" isDesktop={isDesktop}>Generate answer</PrimaryButton> 
         </Grid>
         <Grid item xs={12}  md={6}>
         <Box style={style.formControl}>
             <label htmlFor="company_name" style={style.label}>Answer</label>
-            <TextField id="filled-basic" label="Answer" variant="filled" fullWidth multiline rows="7.5" style={{backgroundColor: 'white'}}/>
+            <TextField id="filled-basic" fullWidth multiline rows="7.5" style={{backgroundColor: 'white'}}/>
         </Box>
         </Grid>
     </Grid>

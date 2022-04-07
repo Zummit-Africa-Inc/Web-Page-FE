@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import AIinAction from './Section/AIinAction';
 import ContactSection from './Section/ContactSection';
