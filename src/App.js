@@ -9,12 +9,16 @@ import LeverageSection from './Section/LeverageSection';
 import InternshipSection from './Section/InternshipSection';
 
 import FooterSection from './Section/FooterSection';
+import BrandSection from './Section/BrandSection';
 
 function App() {
   return (
     <>
       <Hero />
       {/* Section One to be done by ThankGod */}
+
+      {/* BrandSection by Temitope */}
+      <BrandSection />
 
       {/* Section Two by Joshua*/}
       <SectionTwo />
