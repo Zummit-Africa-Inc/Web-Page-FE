@@ -46,3 +46,19 @@ export function Paragraph({ children, styled }) {
     </Typography>
   );
 }
+
+export function InternsText({ children, styled }) {
+  return (
+    <Typography
+      component="p"
+      sx={{
+        fontSize: '15px',
+        textAlign: `${styled}`,
+        display: 'flex',
+        paddingBottom: '12px'
+      }}
+    >
+      {children}
+    </Typography>
+  );
+}
