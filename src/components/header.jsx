@@ -14,7 +14,7 @@ import {
 
 const Header = () => {
   const PAGES = ['About', 'Services', 'Contact'];
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
   return (
@@ -30,7 +30,7 @@ const Header = () => {
           ) : (
             <Tabs
               sx={{ marginLeft: 'auto' }}
-              textColor="white"
+              textColor="inherit"
               value={value}
               onChange={(e, value) => setValue(value)}
               indicatorColor="primary"

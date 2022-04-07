@@ -5,7 +5,6 @@ import { sliderItem } from './sliderItem';
 import { Typography } from '@mui/material';
 
 const Slider = () => {
-  console.log(sliderItem);
   return (
     <div>
       <Box sx={{ my: 15 }}>

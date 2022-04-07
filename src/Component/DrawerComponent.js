@@ -46,7 +46,7 @@ const DrawerComponent = () => {
         >
           <List>
             {PAGES.map((page, index) => (
-              <ListItemButton onClick={() => setOpenDrawer(false)}>
+              <ListItemButton key={ index }onClick={() => setOpenDrawer(false)}>
                 <ListItemIcon sx={{ paddingBottom: 2, paddingTop: 3 }}>
                   <ListItemText
                     disableTypography

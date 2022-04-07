@@ -18,7 +18,6 @@ export default function internshipTracks() {
       [theme.breakpoints.down('md')]: {
         alignItems: 'center',
         flexDirection: 'column'
-        
       }
     },
     header: {

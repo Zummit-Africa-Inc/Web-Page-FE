@@ -179,7 +179,7 @@ const SliderComponent = ({ items }) => {
   const sliders = () => {
     return items.map((item) => {
       return (
-        <Box>
+        <Box key={item.id}>
           <Card
             sx={{
               height: 416,

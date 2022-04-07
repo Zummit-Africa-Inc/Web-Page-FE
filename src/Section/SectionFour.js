@@ -1,11 +1,11 @@
-import React from "react";
-import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
-import { PrimaryHeader, Header, Paragraph } from "../Component/Typography";
-import MoreTimeOutlinedIcon from "@mui/icons-material/MoreTimeOutlined";
-import Icon from "../Component/Icon";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import SaveIcon from "../Images/save-icon.png";
+import React from 'react';
+import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { PrimaryHeader, Header, Paragraph } from '../Component/Typography';
+import MoreTimeOutlinedIcon from '@mui/icons-material/MoreTimeOutlined';
+import Icon from '../Component/Icon';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import SaveIcon from '../Images/save-icon.png';
 
 export default function SectionFour() {
   const theme = useTheme();
