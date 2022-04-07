@@ -5,9 +5,9 @@ import ContactSection from './Section/ContactSection';
 import Hero from "./Section/Hero"
 import SectionFour from './Section/SectionFour';
 import SectionTwo from './Section/WhyZummit';
-import LeverageSection from "./Section/LeverageSection"
-
+import LeverageSection from "./Section/LeverageSection";
 import FooterSection from './Section/FooterSection';
+import BrandSection from './Section/BrandSection';
 
 
 
@@ -18,6 +18,9 @@ function App() {
     
       <Hero/> 
       {/* Section One to be done by ThankGod */}
+
+      {/* BrandSection by Temitope */}
+      <BrandSection />
 
       {/* Section Two by Joshua*/}
       <SectionTwo /> 
