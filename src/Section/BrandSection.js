@@ -13,7 +13,7 @@ function BrandSection() {
     <>
       <Box component="section"  sx={{ py: '9rem', backgroundColor:'white'}}
         px={{xs:2, sm:3, md:'6rem', lg:'9rem', xl:'15rem'}}>
-        <Box sx={{color:'#081F4A', marginBottom:'2rem'}}>
+        <Box sx={{color:'#081F4A', marginBottom:'6rem'}}>
             <Typography2 pbSize='0'>Supported by some of the world's most innovative brands</Typography2>
         </Box>
         <Grid container direction='row' spacing={3} justifyContent='space-around' alignItems='center'>

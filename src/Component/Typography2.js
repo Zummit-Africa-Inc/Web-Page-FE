@@ -10,7 +10,7 @@ export function Typography2({children, pbSize}) {
     const isMobile = useMediaQuery(theme.breakpoints.up("lg"));
     let customFontsize = isMobile ? "2.125rem" : "1.9rem";
   return (
-    <Typography variant="h6" component="h4" sx={{ textAlign: 'center', paddingBottom: pbSize, fontWeight: '800', fontSize: customFontsize}} >
+    <Typography variant="h6" component="h4" sx={{ textAlign: 'center', paddingBottom: pbSize, fontWeight: '500', fontSize: customFontsize}} >
         {children}
     </Typography>
   )
