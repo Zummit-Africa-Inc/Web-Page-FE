@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState } from 'react';
 import {
   Drawer,
   List,
@@ -6,13 +6,13 @@ import {
   ListItemIcon,
   ListItemText,
   IconButton,
-  Typography,
-} from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import MenuIcon from "@mui/icons-material/Menu";
-import Button from "./ButtonComponent";
+  Typography
+} from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MenuIcon from '@mui/icons-material/Menu';
+import Button from './ButtonComponent';
 
-const PAGES = ["About", "Services", "Contact"];
+const PAGES = ['About', 'Services', 'Contact'];
 
 const DrawerComponent = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -21,11 +21,11 @@ const DrawerComponent = () => {
       MuiBackdrop: {
         styleOverrides: {
           root: {
-            backgroundColor: "rgba(0,0,0,0)",
-          },
-        },
-      },
-    },
+            backgroundColor: 'rgba(0,0,0,0)'
+          }
+        }
+      }
+    }
   });
   return (
     <Fragment>
@@ -33,25 +33,25 @@ const DrawerComponent = () => {
         <Drawer
           PaperProps={{
             sx: {
-              backgroundColor: "#081F4A",
-              width: "100%",
-              height: "60vh",
-              marginTop: "60px",
-              borderBottomLeftRadius: "25px",
-              borderBottomRightRadius: "25px",
-            },
+              backgroundColor: '#081F4A',
+              width: '100%',
+              height: '60vh',
+              marginTop: '60px',
+              borderBottomLeftRadius: '25px',
+              borderBottomRightRadius: '25px'
+            }
           }}
           open={openDrawer}
           onClose={() => setOpenDrawer(false)}
         >
           <List>
             {PAGES.map((page, index) => (
-              <ListItemButton onClick={() => setOpenDrawer(false)}>
+              <ListItemButton key={ index }onClick={() => setOpenDrawer(false)}>
                 <ListItemIcon sx={{ paddingBottom: 2, paddingTop: 3 }}>
                   <ListItemText
                     disableTypography
                     primary={
-                      <Typography type="body2" style={{ color: "#FFFFFF" }}>
+                      <Typography type="body2" style={{ color: '#FFFFFF' }}>
                         {page}
                       </Typography>
                     }
@@ -61,7 +61,7 @@ const DrawerComponent = () => {
             ))}
           </List>
           <Button
-            spacing={{ marginRight: "40px", marginLeft: "40px" }}
+            spacing={{ marginRight: '40px', marginLeft: '40px' }}
             variant="outlined"
           >
             Request a Demo
@@ -69,7 +69,7 @@ const DrawerComponent = () => {
         </Drawer>
       </ThemeProvider>
       <IconButton
-        sx={{ color: "white" }}
+        sx={{ color: 'white' }}
         onClick={() => setOpenDrawer(!openDrawer)}
       >
         <MenuIcon />

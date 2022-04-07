@@ -1,6 +1,6 @@
-import React from "react";
-import Header from '../components/header'
-import Herobody from '../components/herobody'
+import React from 'react';
+import Header from '../components/header';
+import Herobody from '../components/herobody';
 function Hero() {
   return (
     <div>
@@ -10,4 +10,4 @@ function Hero() {
   );
 }
 
-export default Hero; 
+export default Hero;
