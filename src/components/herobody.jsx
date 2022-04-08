@@ -2,6 +2,7 @@ import React from 'react';
 import '../CSS/herobody.css';
 import aiStyle from '../Images/Vector 7.png';
 import Button from '../Component/ButtonComponent';
+import HeroImage from '../Images/Heroimage.png'
 import { useMediaQuery, useTheme } from '@mui/material';
 
 function HeroBody() {
@@ -11,7 +12,7 @@ function HeroBody() {
     <>
       {isMatch ? (
         <div className="hero_md">
-          <div className="hero_image_md">
+          
             <div className="hero-text_md">
               <h1 className="hero_heading_md">
                 Tell Us The Problem <br /> We'll solve it with
@@ -36,11 +37,13 @@ function HeroBody() {
                 Experiment A.I
               </Button>
             </div>
+            <div className="hero_image_md">
+              <img src={HeroImage} className="hero_img rotate"/>
           </div>
         </div>
       ) : (
         <div className="hero">
-          <div className="hero_image">
+         
             <div className="hero-text">
               <h1 style={{ fontSize: '50px' }}>
                 Tell Us The Problem <br /> We'll solve it with
@@ -59,6 +62,8 @@ function HeroBody() {
 
               <Button variant="outlined">Experiment A.I</Button>
             </div>
+            <div className="hero_image">
+            <img src={HeroImage} className="hero_img rotate"/>
           </div>
         </div>
       )}

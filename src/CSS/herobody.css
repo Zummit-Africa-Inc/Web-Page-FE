@@ -1,25 +1,30 @@
 .hero {
   background-color: #081f4a;
-  padding-top: 11%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11% 6rem 11% 6rem;
   height: 100vh;
 }
 
-.hero_image {
+/* .hero_image {
   background-image: url('../Images/Heroimage.png');
   height: 70vh;
   background-position: 90% 0;
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-}
+} */
 
 .hero-text {
-  text-align: left;
+  /* text-align: left;
   position: absolute;
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
-  color: white;
+  */
+  color: white; 
 }
 
 .hero_span {
@@ -29,15 +34,20 @@
 
 .hero_md {
   background-color: #081f4a;
-  padding-top: 25%;
+  /* padding-top: 25%; */
+  padding: 25% 0 0 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero-text_md {
-  text-align: left;
+  /* text-align: left;
   position: absolute;
   top: 35%;
   left: 45%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   color: white;
 }
 
@@ -50,11 +60,24 @@
   line-height: 52px;
 }
 
-.hero_image_md {
+/* .hero_image_md {
   background-image: url('../Images/Heroimage.png');
   height: 50vh;
   background-position: 90% 0;
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
+} */
+
+.rotate{
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(359deg);
+  }
 }
