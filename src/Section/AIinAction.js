@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Grid, TextField, useMediaQuery, useTheme } from '@mui/material';
+import axios from 'axios'
+
+//custom imports
 import { PrimaryHeader, Header } from '../Component/Typography';
 import PrimaryButton from '../Component/Button';
 import bgImage from '../Images/pattern_herringbone.png';
@@ -14,6 +17,36 @@ export default function AIinAction() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
+  // states for form and answer
+  const [data, setData] = useState('')
+  const [context, setContext] = useState('')
+  const [question, setQuestion] = useState('')
+
+  //function to submit form to server
+  const handleFormSubmit = async(e) => {
+    e.preventDefault()
+
+    //run check for empty fields
+    if(context === '' || question === '') {
+      return alert("Please fill all fields!")
+    }
+
+    //axios headers
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    //payload to be sent
+    const payLoad = { question, context }
+
+    axios.post('https://qnanswer-api.pk25mf6178910.eu-west-3.cs.amazonlightsail.com/q_and_a', payLoad, { headers })
+    .then(res => setData(res.data.answer))
+    .catch(err => console.log(err))
+
+    //clear text fields
+    setContext('')
+    setQuestion('')
+  }
+
   return (
     <Box
       component="section"
@@ -26,6 +59,7 @@ export default function AIinAction() {
       </Header>
       <Grid container columnSpacing={6}>
         <Grid item xs={12} md={6}>
+          <form onSubmit={handleFormSubmit} >
           <Box style={style.formControl}>
             <label htmlFor="company_name" style={style.label}>
               Enter body text / paragraph
@@ -36,6 +70,8 @@ export default function AIinAction() {
               multiline
               rows="3.65"
               style={{ backgroundColor: 'white' }}
+              value={context}
+              onChange={(e) => setContext(e.target.value)}
             />
           </Box>
           <Box style={style.formControl}>
@@ -47,6 +83,8 @@ export default function AIinAction() {
               fullWidth
               style={{ backgroundColor: 'white' }}
               size="small"
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
             />
           </Box>
           <PrimaryButton
@@ -54,9 +92,11 @@ export default function AIinAction() {
             bgcolor="#FFEA00"
             margin="2rem 0"
             isDesktop={isDesktop}
+            type='submit'
           >
             Generate answer
           </PrimaryButton>
+          </form>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box style={style.formControl}>
@@ -69,6 +109,10 @@ export default function AIinAction() {
               multiline
               rows="7.5"
               style={{ backgroundColor: 'white' }}
+              value={data}
+              inputProps={
+                { readOnly: true }
+              }
             />
           </Box>
         </Grid>
