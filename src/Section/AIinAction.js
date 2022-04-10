@@ -38,7 +38,7 @@ export default function AIinAction() {
     //payload to be sent
     const payLoad = { question, context }
 
-    axios.post('https://qnanswer-api.pk25mf6178910.eu-west-3.cs.amazonlightsail.com/q_and_a', payLoad, { headers })
+    axios.post(process.env.REACT_APP_AI_URL, payLoad, { headers })
     .then(res => setData(res.data.answer))
     .catch(err => console.log(err))
 
