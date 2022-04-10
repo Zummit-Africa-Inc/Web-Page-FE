@@ -6,7 +6,9 @@ export default function PrimaryButton({
   bgcolor,
   color,
   isDesktop,
-  margin = '5rem 0 0 0'
+  margin = '5rem 0 0 0',
+  type,
+  onClick
 }) {
   // Check to know if its in desktop or mobile phone screen and apply margin based on Screen Sizes
   let screenSize = isDesktop ? `${margin}` : '2rem auto';
@@ -26,6 +28,8 @@ export default function PrimaryButton({
           backgroundColor: `${bgcolor}`
         }
       }}
+      type={type}
+      onClick={onClick}
     >
       {children}
     </Button>
