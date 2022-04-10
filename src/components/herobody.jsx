@@ -12,19 +12,19 @@ function HeroBody() {
     <>
       {isMatch ? (
         <div className="hero_md">
-          
+          <div className="hero_image_md">
             <div className="hero-text_md">
               <h1 className="hero_heading_md">
                 Tell Us The Problem <br /> We'll solve it with
                 <span style={{ color: 'yellow' }}>&nbsp;A.I</span>
-                <span className="hero_span">
+                <span className="hero_span_md">
                   <img style={{ width: '50px' }} src={aiStyle} alt="ai Style" />
                 </span>
               </h1>
-              <p style={{ paddingBottom: '30px' }}>
+              <p style={{ padding: '30px 0' }}>
                 Lets give your business a head start!
               </p>
-
+            <div className="hero-cta-btns">
               <Button
                 size="small"
                 spacing={{ marginRight: '1rem' }}
@@ -37,8 +37,9 @@ function HeroBody() {
                 Experiment A.I
               </Button>
             </div>
-            <div className="hero_image_md">
-              <img src={HeroImage} className="hero_img rotate"/>
+            </div>
+            
+              
           </div>
         </div>
       ) : (
@@ -52,7 +53,7 @@ function HeroBody() {
                   <img src={aiStyle} alt="ai Style" />
                 </span>
               </h1>
-              <p style={{ paddingBottom: '30px' }}>
+              <p style={{ padding: '30px 0' }}>
                 Lets give your business a head start!
               </p>
 
