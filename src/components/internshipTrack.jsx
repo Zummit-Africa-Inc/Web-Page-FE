@@ -1,16 +1,21 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { InternsText } from '../Component/Typography';
-import tracksimage1 from '../Images/Group 76.png';
-import tracksimage2 from '../Images/Group 74.png';
-import tracksimage3 from '../Images/Deep learning icon.png';
-import { createTheme, Typography } from '@mui/material';
+import { createTheme, MenuItem, Select, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Grid, TextField, Button } from '@mui/material';
 
-export default function internshipTracks() {
+import tracksimage1 from '../Images/Group 76.png';
+import tracksimage2 from '../Images/Group 74.png';
+import tracksimage3 from '../Images/Deep learning icon.png';
+
+
+const InternshipTracks = () => {
+  const [email, setEmail] = useState('')
+  const [category, setCategory] = useState('')
+
   const theme = createTheme();
 
   const usedStyles = makeStyles(() => ({
@@ -30,7 +35,8 @@ export default function internshipTracks() {
       justifyContent: 'center',
       paddingTop: '100px',
       paddingBottom: '30px',
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      textAlign: 'center'
     },
     text: {
       padding: '10px'
@@ -50,10 +56,38 @@ export default function internshipTracks() {
           width: '30vh'
         }
       }
+    },
+    select: {
+      background: '#fff'
     }
   }));
 
   const classes = usedStyles();
+
+  const handleJoinWaitlist = async(e) => {
+    e.preventDefault()
+    
+     //run check for empty fields
+     if(email === '' || category === '') return alert('Please fill all fields!')
+
+     //payload to be sent
+     const payLoad = { email, category }
+   
+     //axios request for demo
+     const res = await fetch(process.env.REACT_APP_WAITLIST_URL, {
+       method: 'POST',
+       headers: {
+        'Content-Type': 'application/json'
+       },
+       body: JSON.stringify(payLoad)
+     })
+     const data = await res.json()
+     alert(data.message)
+ 
+     //reset textfields to empty
+     setEmail('')
+  }
+
   return (
     <div style={{ backgroundColor: '#081F4A' }}>
       <Typography variant="h2" className={classes.header}>
@@ -63,12 +97,11 @@ export default function internshipTracks() {
       <Box
         sx={{
           display: 'flex',
-
           '& > :not(style)': {
             m: 5,
             p: 3,
-            width: 414,
-            height: 354
+            // width: 414,
+            // height: 354
           }
         }}
         className={classes.box}
@@ -206,14 +239,11 @@ export default function internshipTracks() {
           display: 'flex',
           backgroundColor: '#081F4A',
           justifyContent: 'center',
-
           '& > :not(style)': {
-            m: 5,
-            p: 3
-          }
-        }}
-      >
-        <Grid container style={{ justifyContent: 'center' }}>
+            m: 5, p: 3 
+            }}}>
+      <Grid container style={{ justifyContent: 'center' }}>
+          <form onSubmit={handleJoinWaitlist}>
           <Grid item>
             <TextField
               fullWidth
@@ -221,9 +251,19 @@ export default function internshipTracks() {
               spacing={{ m: 10 }}
               label="Email Address"
               variant="filled"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Grid>
-
+          <Grid>
+            <Select value={category} onChange={(e) => setCategory(e.target.value)} fullWidth className={classes.select} >
+              <MenuItem value=''>--SELECT--</MenuItem>
+              <MenuItem value='general'>General</MenuItem>
+              <MenuItem value='deep_learning'>Deep Learning</MenuItem>
+              <MenuItem value='web_development'>Web Development</MenuItem>
+              <MenuItem value='data_science'>Data Science</MenuItem>
+            </Select>
+          </Grid>
           <Grid item alignItems="stretch" style={{ display: 'flex' }}>
             <Button
               style={{
@@ -233,12 +273,17 @@ export default function internshipTracks() {
               }}
               color="secondary"
               variant="contained"
+              type='submit'
             >
               Join the WaitList
             </Button>
           </Grid>
+          </form>
         </Grid>
       </Box>
     </div>
   );
 }
+
+
+export default InternshipTracks

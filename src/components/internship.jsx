@@ -12,25 +12,28 @@ const internship = () => {
 
   const usedStyles = makeStyles(() => ({
     responsive: {
-      [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '3rem',
+      '@media screen and (max-width: 800px)' : {
         flexDirection: 'column-reverse'
       }
     },
     image: {
-      width: '453px',
+      width: '100%',
       [theme.breakpoints.down('sm')]: {
         width: '290px'
       }
     },
     text: {
+      width: '100%',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '18px',
       lineHeight: '36px',
-
       display: 'flex',
       alignItems: 'center',
-
       color: '#FFFFFF',
       [theme.breakpoints.down('md')]: {
         padding: 0
@@ -66,16 +69,12 @@ const internship = () => {
 
       <Box sx={{ flexGrow: 1 }}>
         <Grid className={classes.responsive} container spacing={1}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             <Box sx={{ paddingX: '60px' }}>
-              <img
-                className={classes.image}
-                src={internshipImage1}
-                alt="internship image1"
-              />
+              <img className={classes.image} src={internshipImage1} alt="internship image1"/>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             <Box sx={{ paddingX: '60px' }}>
               <Typography variant="h6" style={{ color: 'white' }}>
                 Zummit Africa Tech internship
@@ -92,17 +91,12 @@ const internship = () => {
             </Box>
           </Grid>
         </Grid>
-        <br />
-        <br />
-        <br />
-        <br />
         <Grid container spacing={1}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             <Box sx={{ paddingX: '60px' }}>
               <Typography variant="h6" style={{ color: 'white' }}>
                 Who should apply
               </Typography>
-
               <Typography className={classes.text}>
                 Anybody can apply. The Internship itself focuses on participants
                 with prior experience either by going through the training
@@ -115,17 +109,9 @@ const internship = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={6}>
-            <Box
-              sx={{
-                paddingX: '60px'
-              }}
-            >
-              <img
-                className={classes.image}
-                src={internshipImage2}
-                alt="internship"
-              />
+          <Grid item xs={12} sm={6}>
+            <Box sx={{ paddingX: '60px' }}>
+              <img className={classes.image} src={internshipImage2} alt="internship" />
             </Box>
           </Grid>
         </Grid>
