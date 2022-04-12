@@ -1,11 +1,18 @@
-import React from 'react';
-import { PrimaryHeader } from '../Component/Typography';
+import React, { useState } from 'react';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
-import PrimaryButton from '../Component/Button';
 import { TextField } from '@mui/material';
+
+import PrimaryButton from '../Component/Button';
+import { PrimaryHeader } from '../Component/Typography';
 import '../CSS/contactSection.css';
 
 export default function ContactSection() {
+  //states for form input
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
+  const [companyName, setCompanyName] = useState('')
+  const [message, setMessage] = useState('')
+
   // MaterialUI Hook for Breakpoints
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
@@ -18,7 +25,36 @@ export default function ContactSection() {
   const style = {
     formControl: { margin: '1.5rem .2rem' },
     label: { display: 'inline-block', paddingBottom: '.4rem' }
-  };
+  }
+  
+  const handleDemoRequest = async(e) => {
+    e.preventDefault()
+
+    //run check for empty fields
+    if(fullName === ''|| email === '' || companyName === '' || message === '') return alert('Please fill all fields!')
+
+    //payload to be sent
+    const payLoad = { fullName, email, companyName, message }
+  
+    //axios request for demo
+    const res = await fetch(process.env.REACT_APP_DEMO_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payLoad)
+    })
+    const data = await res.json()
+    alert(data.message)
+
+    //reset textfields to empty
+    setFullName('')
+    setEmail('')
+    setCompanyName('')
+    setMessage()
+  }
+  
+
   return (
     <Box
       component="section"
@@ -39,14 +75,15 @@ export default function ContactSection() {
         We’ll show you how Zummit Africa can make your process easier and better
       </Typography>
       <Box
-        className="contact-section"
-        sx={{ width: `${customWidth}`, margin: '3rem auto 0 auto' }}
-      >
+        className="contact-section" sx={{ width: `${customWidth}`, margin: '3rem auto 0 auto' }}>
+        <form onSubmit={handleDemoRequest}>
         <Box style={style.formControl}>
           <label htmlFor="fullnames" style={style.label}>
             Full name
           </label>
           <TextField
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
             id="filled-basic"
             fullWidth
             style={{ backgroundColor: 'white' }}
@@ -58,6 +95,8 @@ export default function ContactSection() {
             Email Address
           </label>
           <TextField
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             id="filled-basic"
             fullWidth
             style={{ backgroundColor: 'white' }}
@@ -69,6 +108,8 @@ export default function ContactSection() {
             Company Name
           </label>
           <TextField
+            value={companyName}
+            onChange={(e) => setCompanyName(e.target.value)}
             id="filled-basic"
             fullWidth
             style={{ backgroundColor: 'white' }}
@@ -76,10 +117,12 @@ export default function ContactSection() {
           />
         </Box>
         <Box style={style.formControl}>
-          <label htmlFor="company_name" style={style.label}>
+          <label htmlFor="message" style={style.label}>
             Message
           </label>
           <TextField
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             id="filled-basic"
             fullWidth
             multiline
@@ -87,9 +130,10 @@ export default function ContactSection() {
             style={{ backgroundColor: 'white' }}
           />
         </Box>
-        <PrimaryButton color="#09090B" bgcolor="#FFEA00" margin="5rem auto">
+        <PrimaryButton type='submit' color="#09090B" bgcolor="#FFEA00" margin="5rem auto">
           Get a demo
         </PrimaryButton>
+        </form>
       </Box>
     </Box>
   );
