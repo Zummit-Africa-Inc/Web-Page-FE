@@ -27,6 +27,7 @@ export default function internshipTracks() {
       fontSize: '32px',
       lineHeight: '26px',
       display: 'flex',
+      textAlign: 'center',
       justifyContent: 'center',
       paddingTop: '100px',
       paddingBottom: '30px',
@@ -67,7 +68,7 @@ export default function internshipTracks() {
           '& > :not(style)': {
             m: 5,
             p: 3,
-            width: 414,
+            width: 360,
             height: 354
           }
         }}

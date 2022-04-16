@@ -64,7 +64,7 @@ function HeroBody() {
               <Button variant="outlined">Experiment A.I</Button>
             </div>
             <div className="hero_image">
-            <img src={HeroImage} className="hero_img rotate"/>
+            <img src={HeroImage} className="hero_img"/>
           </div>
         </div>
       )}

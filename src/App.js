@@ -13,7 +13,7 @@ import BrandSection from './Section/BrandSection';
 
 function App() {
   return (
-    <>
+    < div className="App">
       <Hero />
       {/* Section One to be done by ThankGod */}
 
@@ -38,7 +38,7 @@ function App() {
 
       {/* Footer Section to be done by Zainab */}
       <FooterSection />
-    </>
+    </div>
   );
 }
 

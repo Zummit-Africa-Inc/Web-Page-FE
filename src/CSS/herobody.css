@@ -98,9 +98,9 @@ right:0;
   align-items: center;
 }
 
-.rotate{
+/* .rotate{
   animation: rotation 5s infinite linear;
-}
+} */
 
 @keyframes rotation{
   from{
