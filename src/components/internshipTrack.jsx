@@ -14,7 +14,6 @@ import tracksimage3 from '../Images/Deep learning icon.png';
 
 const InternshipTracks = () => {
   const [email, setEmail] = useState('')
-  const [category, setCategory] = useState('')
 
   const theme = createTheme();
 
@@ -26,10 +25,9 @@ const InternshipTracks = () => {
       }
     },
     header: {
-      fontFamily: 'Lato',
       fontStyle: 'normal',
       fontWeight: 700,
-      fontSize: '32px',
+      fontSize: '2rem',
       lineHeight: '26px',
       display: 'flex',
       justifyContent: 'center',
@@ -68,10 +66,10 @@ const InternshipTracks = () => {
     e.preventDefault()
     
      //run check for empty fields
-     if(email === '' || category === '') return alert('Please fill all fields!')
+     if(email === '') return alert('Please fill all fields!')
 
      //payload to be sent
-     const payLoad = { email, category }
+     const payLoad = { email, category: 'general' }
    
      //axios request for demo
      const res = await fetch(process.env.REACT_APP_WAITLIST_URL, {
@@ -255,7 +253,7 @@ const InternshipTracks = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </Grid>
-          <Grid>
+          {/* <Grid>
             <Select value={category} onChange={(e) => setCategory(e.target.value)} fullWidth className={classes.select} >
               <MenuItem value=''>--SELECT--</MenuItem>
               <MenuItem value='general'>General</MenuItem>
@@ -263,13 +261,14 @@ const InternshipTracks = () => {
               <MenuItem value='web_development'>Web Development</MenuItem>
               <MenuItem value='data_science'>Data Science</MenuItem>
             </Select>
-          </Grid>
+          </Grid> */}
           <Grid item alignItems="stretch" style={{ display: 'flex' }}>
             <Button
               style={{
                 borderRadius: '0 4px 4px 0',
                 backgroundColor: '#FFEA00',
-                color: 'black'
+                color: 'black',
+                height: '3.3rem'
               }}
               color="secondary"
               variant="contained"
