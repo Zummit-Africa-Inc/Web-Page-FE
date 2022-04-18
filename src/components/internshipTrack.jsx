@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { InternsText } from '../Component/Typography';
-import { createTheme, MenuItem, Select, Typography } from '@mui/material';
+import { createTheme, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Grid, TextField, Button } from '@mui/material';
+import { TextField, Button } from '@mui/material';
 
 import tracksimage1 from '../Images/Group 76.png';
 import tracksimage2 from '../Images/Group 74.png';
@@ -49,14 +49,32 @@ const InternshipTracks = () => {
         background: 'white',
         borderRadius: '4px 0 0 4px',
         width: '60vh',
-        height: '10%',
+        height: '100%',
         [theme.breakpoints.down('md')]: {
-          width: '30vh'
+          width: '80vw',
+          marginBottom: '2rem'
         }
       }
     },
     select: {
       background: '#fff'
+    },
+    formConrol: {
+      width: '100%',
+      height: '200px',
+      display: 'grid',
+      placeItems: 'center',
+    },
+    form: {
+      width: '100%',
+      height: '55px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      [theme.breakpoints.down('md')]: {
+        flexDirection: 'column',
+        height: '150px'
+      }
     }
   }));
 
@@ -232,54 +250,30 @@ const InternshipTracks = () => {
         </Paper>
       </Box>
 
-      <Box
-        sx={{
-          display: 'flex',
-          backgroundColor: '#081F4A',
-          justifyContent: 'center',
-          '& > :not(style)': {
-            m: 5, p: 3 
-            }}}>
-      <Grid container style={{ justifyContent: 'center' }}>
-          <form onSubmit={handleJoinWaitlist}>
-          <Grid item>
-            <TextField
-              fullWidth
-              className={classes.root}
-              spacing={{ m: 10 }}
-              label="Email Address"
-              variant="filled"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Grid>
-          {/* <Grid>
-            <Select value={category} onChange={(e) => setCategory(e.target.value)} fullWidth className={classes.select} >
-              <MenuItem value=''>--SELECT--</MenuItem>
-              <MenuItem value='general'>General</MenuItem>
-              <MenuItem value='deep_learning'>Deep Learning</MenuItem>
-              <MenuItem value='web_development'>Web Development</MenuItem>
-              <MenuItem value='data_science'>Data Science</MenuItem>
-            </Select>
-          </Grid> */}
-          <Grid item alignItems="stretch" style={{ display: 'flex' }}>
-            <Button
-              style={{
-                borderRadius: '0 4px 4px 0',
-                backgroundColor: '#FFEA00',
-                color: 'black',
-                height: '3.3rem'
-              }}
-              color="secondary"
-              variant="contained"
-              type='submit'
-            >
-              Join the WaitList
-            </Button>
-          </Grid>
-          </form>
-        </Grid>
-      </Box>
+      <Box className={classes.formConrol}>
+        <form onSubmit={handleJoinWaitlist} className={classes.form}>
+          <TextField
+            className={classes.root}
+            spacing={{ m: 10 }}
+            label="Email Address"
+            variant="filled"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} />
+          <Button
+            style={{
+              borderRadius: '0 4px 4px 0',
+              backgroundColor: '#FFEA00',
+              color: 'black',
+              height: '56px'
+            }}
+            color="secondary"
+            variant="contained"
+            type='submit'
+          >
+            Join the WaitList
+          </Button>
+        </form>
+        </Box>
     </div>
   );
 }
