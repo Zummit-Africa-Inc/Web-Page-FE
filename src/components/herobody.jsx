@@ -1,12 +1,14 @@
 import React from 'react';
+import { useMediaQuery, useTheme } from '@mui/material';
+
 import '../CSS/herobody.css';
 import aiStyle from '../Images/Vector 7.png';
 import Button from '../Component/ButtonComponent';
-import { useMediaQuery, useTheme } from '@mui/material';
 
 function HeroBody() {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  
   return (
     <>
       {isMatch ? (
@@ -23,17 +25,17 @@ function HeroBody() {
               <p style={{ paddingBottom: '30px' }}>
                 Lets give your business a head start!
               </p>
-
-              <Button
-                size="small"
-                spacing={{ marginRight: '1rem' }}
-                variant="contained"
-              >
-                <span style={{ color: 'black' }}>Request a Demo</span>
+              
+              <Button size="small" spacing={{ marginRight: '1rem' }} variant="contained">
+                <a href="#demo" style={{ color: 'black' }} >
+                  Request a Demo
+                </a>
               </Button>
 
               <Button size="small" variant="outlined">
-                Experiment A.I
+              <a href="#ai" >
+                  Experiment a.i
+                </a>
               </Button>
             </div>
           </div>
@@ -53,11 +55,17 @@ function HeroBody() {
                 Lets give your business a head start!
               </p>
 
-              <Button spacing={{ marginRight: '2rem' }} variant="contained">
-                <span style={{ color: 'black' }}>Request a Demo</span>
+              <Button size="small" spacing={{ marginRight: '1rem' }} variant="contained">
+                <a href="#demo" style={{ color: 'black' }} >
+                  Request a Demo
+                </a>
               </Button>
 
-              <Button variant="outlined">Experiment A.I</Button>
+              <Button size="small" variant="outlined">
+              <a href="#ai" >
+                  Experiment a.i
+                </a>
+              </Button>
             </div>
           </div>
         </div>

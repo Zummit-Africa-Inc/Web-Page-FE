@@ -51,7 +51,7 @@ export default function AIinAction() {
     <Box
       component="section"
       sx={{ py: '4rem', backgroundImage: `url(${bgImage})`, color: '#FFFFFF' }}
-      px={{ xs: 2, sm: 3, md: '6rem', lg: '9rem', xl: '15rem' }}
+      px={{ xs: 2, sm: 3, md: '6rem', lg: '9rem', xl: '15rem' }} id='ai'
     >
       <PrimaryHeader pbSize="0">A.I in action</PrimaryHeader>
       <Header textSize="h6" textAlign="center">

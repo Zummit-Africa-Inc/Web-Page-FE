@@ -10,10 +10,11 @@ const theme = createTheme({
   }
 });
 
-export default function CustomColor({ variant, spacing, size, children }) {
+export default function CustomColor({ variant, spacing, size, children, onClick }) {
+  
   return (
     <ThemeProvider theme={theme}>
-      <Button color="neutral" variant={variant} sx={spacing} size={size}>
+      <Button color="neutral" variant={variant} sx={spacing} size={size} onClick={onClick} >
         {children}
       </Button>
     </ThemeProvider>

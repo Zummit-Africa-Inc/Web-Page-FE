@@ -8,16 +8,18 @@ export default function PrimaryButton({
   isDesktop,
   margin = '5rem 0 0 0',
   type,
-  onClick
+  onClick,
+  variant,
+  size
 }) {
   // Check to know if its in desktop or mobile phone screen and apply margin based on Screen Sizes
   let screenSize = isDesktop ? `${margin}` : '2rem auto';
 
   return (
     <Button
-      variant="contained"
+      variant={variant ? variant : 'contained'}
       display="flex"
-      size="large"
+      size={size ? size : "large"}
       sx={{
         backgroundColor: `${bgcolor}`,
         color: `${color}`,
