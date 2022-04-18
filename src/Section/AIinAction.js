@@ -38,13 +38,13 @@ export default function AIinAction() {
     //payload to be sent
     const payLoad = { question, context }
 
+    // clear the response field for new response
+    setData('')
+
     axios.post(process.env.REACT_APP_AI_URL, payLoad, { headers })
     .then(res => setData(res.data.answer))
     .catch(err => console.log(err))
 
-    //clear text fields
-    setContext('')
-    setQuestion('')
   }
 
   return (
