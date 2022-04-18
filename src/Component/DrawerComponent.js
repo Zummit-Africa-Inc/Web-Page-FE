@@ -62,9 +62,9 @@ const DrawerComponent = () => {
           </List>
           <Button
             spacing={{ marginRight: '40px', marginLeft: '40px' }}
-            variant="outlined"
+            variant="outlined" onClick={() => setOpenDrawer(false)}
           >
-            Request a Demo
+            <a href='#demo'>Request a Demo</a>
           </Button>
         </Drawer>
       </ThemeProvider>

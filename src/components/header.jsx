@@ -17,6 +17,7 @@ const Header = () => {
   const [value, setValue] = useState(0);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <React.Fragment>
       <AppBar>
@@ -44,7 +45,7 @@ const Header = () => {
               ))}
               <Btx spacing={{ marginLeft: '130px' }} variant="outlined">
                 <span style={{ color: 'white', textTransform: 'capitalize' }}>
-                  Request a demo
+                  <a href="#demo">Request a demo</a>
                 </span>
               </Btx>
             </Tabs>

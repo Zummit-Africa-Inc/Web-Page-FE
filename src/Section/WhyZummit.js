@@ -40,6 +40,7 @@ export default function SectionTwo() {
             marginTop="10rem"
             isDesktop={isDesktop}
           >
+            <a href='#contact'>
             Contact us{' '}
             <img
               src={ReactLogo}
@@ -48,8 +49,8 @@ export default function SectionTwo() {
                 paddingLeft: '.5rem',
                 height: '1.2rem',
                 width: '1.2rem'
-              }}
-            />
+              }} />
+            </a>
           </PrimaryButton>
         </Grid>
       </Grid>

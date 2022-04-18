@@ -4,11 +4,13 @@ import { Link } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
+
 import Logo from '../Images/LOGO.png';
 import Facebook from '../Images/Facebook.png';
 import Twitter from '../Images/Twitter.png';
 import Linkedln from '../Images/Linkedln.png';
 //Material UI icons
+
 export default function FooterSection() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.up('lg'));
@@ -28,7 +30,7 @@ export default function FooterSection() {
       sx={{ py: '4rem', backgroundColor: '#FFFFFF', color: '#081F4A' }}
       px={{ xs: 3, sm: 4, md: '6rem' }}
     >
-      <Grid container pacingcolumn={6} spacingrow={5}>
+      <Grid container pacingcolumn={6} spacingrow={5} >
         <Grid
           item
           xs={6}
@@ -61,12 +63,12 @@ export default function FooterSection() {
           <Typography display="block" py={2} variant="h6" component="h6">
             Products
           </Typography>
-          <Link href="/Apis" underline="none" color="#081F4A">
+          <Link href="/apis" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               AI APIs
             </Typography>
           </Link>
-          <Link href="/Detect" underline="none" color="#081F4A">
+          <Link href="/detect" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Emotion Detection
             </Typography>
@@ -81,7 +83,7 @@ export default function FooterSection() {
               Chat bots
             </Typography>
           </Link>
-          <Link href="/Face" underline="none" color="#081F4A">
+          <Link href="/face" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Face recognition
             </Typography>
@@ -102,22 +104,22 @@ export default function FooterSection() {
           <Typography py={2} variant="h6" component="h6">
             Company
           </Typography>
-          <Link href="/About" underline="none" color="#081F4A">
+          <Link href="/about" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               About
             </Typography>
           </Link>
-          <Link href="/Service" underline="none" color="#081F4A">
+          <Link href="/services" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Services
             </Typography>
           </Link>
-          <Link href="/Internship" underline="none" color="#081F4A">
+          <Link href="/internship" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Internship
             </Typography>
           </Link>
-          <Link href="/Contact" underline="none" color="#081F4A">
+          <Link href="/contact" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Contact
             </Typography>
@@ -133,12 +135,12 @@ export default function FooterSection() {
           <Typography py={2} variant="h6" component="h6">
             Resources
           </Typography>
-          <Link href="/Blog" underline="none" color="#081F4A">
+          <Link href="/blog" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Blog
             </Typography>
           </Link>
-          <Link href="/Customer" underline="none" color="#081F4A">
+          <Link href="/customer" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Customers
             </Typography>
@@ -155,18 +157,19 @@ export default function FooterSection() {
           <Typography py={2} variant="h6" component="h6">
             Legal
           </Typography>
-          <Link href="/Terms" underline="none" color="#081F4A">
+          <Link href="/terms" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Terms
             </Typography>
           </Link>
-          <Link href="/Privacy" underline="none" color="#081F4A">
+          <Link href="/privacy" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Privacy
             </Typography>
           </Link>
         </Grid>
       </Grid>
+      <div id='contact'>
       <Grid container mt={{ xs: '2rem', sm: 4, md: 6, lg: 4 }}>
         <Grid item xs={12} lg={6} fontSize={10}>
           <Box mt={4} mr={{ xs: '1rem', lg: '1rem' }} display="inline-block">
@@ -195,6 +198,7 @@ export default function FooterSection() {
           &copy; 2022, Zummit Africa.
         </Grid>
       </Grid>
+      </div>
     </Box>
   );
 }
