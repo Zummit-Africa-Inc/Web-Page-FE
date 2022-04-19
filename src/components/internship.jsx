@@ -70,12 +70,12 @@ const internship = () => {
       <Box sx={{ flexGrow: 1 }}>
         <Grid className={classes.responsive} container spacing={1}>
           <Grid item xs={12} sm={6}>
-            <Box sx={{ paddingX: '60px' }}>
+            <Box sx={{ paddingX: '60px'}}>
               <img className={classes.image} src={internshipImage1} alt="internship image1"/>
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Box sx={{ paddingX: '60px' }}>
+            <Box sx={{ paddingX: '60px', py: '60px' }}>
               <Typography variant="h6" style={{ color: 'white' }}>
                 Zummit Africa Tech internship
               </Typography>
@@ -93,7 +93,7 @@ const internship = () => {
         </Grid>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
-            <Box sx={{ paddingX: '60px' }}>
+            <Box sx={{ paddingX: '60px', py: '60px'}}>
               <Typography variant="h6" style={{ color: 'white' }}>
                 Who should apply
               </Typography>
