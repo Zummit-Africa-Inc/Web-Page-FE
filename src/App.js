@@ -1,15 +1,7 @@
 import React from 'react';
 import './App.css';
-import AIinAction from './Section/AIinAction';
-import ContactSection from './Section/ContactSection';
-import Hero from './Section/Hero';
-import SectionFour from './Section/SectionFour';
-import SectionTwo from './Section/WhyZummit';
-import LeverageSection from './Section/LeverageSection';
-import InternshipSection from './Section/InternshipSection';
 
-import FooterSection from './Section/FooterSection';
-import BrandSection from './Section/BrandSection';
+import { AIinAction, ContactSection, Hero, SectionFour, SectionTwo, LeverageSection, InternshipSection, FooterSection, BrandSection } from './Section/index';
 
 function App() {
   return (
