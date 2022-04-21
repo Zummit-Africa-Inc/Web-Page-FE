@@ -1,18 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import {
-  Drawer,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  IconButton,
-  Typography
-} from '@mui/material';
+import { Drawer, List, ListItemButton, ListItemIcon, ListItemText, IconButton, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+
 import Button from './ButtonComponent';
 
-const PAGES = ['About', 'Services', 'Contact'];
+const PAGES = ['about', 'services', 'contact'];
 
 const DrawerComponent = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -27,6 +20,7 @@ const DrawerComponent = () => {
       }
     }
   });
+
   return (
     <Fragment>
       <ThemeProvider theme={theme}>
@@ -52,7 +46,7 @@ const DrawerComponent = () => {
                     disableTypography
                     primary={
                       <Typography type="body2" style={{ color: '#FFFFFF' }}>
-                        {page}
+                        <a href={`#${page}`} style={{ textTransform: 'capitalize'}}>{page}</a>
                       </Typography>
                     }
                   ></ListItemText>

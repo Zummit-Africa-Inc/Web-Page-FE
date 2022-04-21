@@ -63,32 +63,32 @@ export default function FooterSection() {
           <Typography display="block" py={2} variant="h6" component="h6">
             Products
           </Typography>
-          <Link href="/#con" underline="none" color="#081F4A">
+          <Link href="/#demo" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               AI APIs
             </Typography>
           </Link>
-          <Link href="/#con" underline="none" color="#081F4A">
+          <Link href="/#demo" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Emotion Detection
             </Typography>
           </Link>
-          <Link href="/#con" underline="none" color="#081F4A">
+          <Link href="/#demo" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Drowsiness Detection
             </Typography>
           </Link>
-          <Link href="/#con" underline="none" color="#081F4A">
+          <Link href="/#demo" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Chat bots
             </Typography>
           </Link>
-          <Link href="/#con" underline="none" color="#081F4A">
+          <Link href="/#demo" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Face recognition
             </Typography>
           </Link>
-          <Link href="/#con" underline="none" color="#081F4A">
+          <Link href="/#demo" underline="none" color="#081F4A">
             <Typography display="block" py={1} fontSize={14} fontWeight={500}>
               Sentiment analysis
             </Typography>
