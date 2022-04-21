@@ -14,6 +14,7 @@ export default function SectionTwo() {
 
   return (
     <Box
+      id="con"
       component="section"
       sx={{ py: '6rem', backgroundColor: '#DEE5EE', color: '#081F4A' }}
       px={{ xs: 3, sm: 4, md: '9rem', xl: '18rem' }}

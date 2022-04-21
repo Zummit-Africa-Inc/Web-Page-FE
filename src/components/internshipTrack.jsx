@@ -34,7 +34,9 @@ const InternshipTracks = () => {
       paddingTop: '100px',
       paddingBottom: '30px',
       color: '#FFFFFF',
-      textAlign: 'center'
+      textAlign: 'center',
+      marginLeft: "auto",
+      marginRight: 'auto'
     },
     text: {
       padding: '10px'
@@ -42,7 +44,9 @@ const InternshipTracks = () => {
     textbox: {
       display: 'flex',
       alignItems: 'center',
-      padding: '10px'
+      padding: '10px',
+      marginLeft: "auto",
+      marginRight: 'auto'
     },
     root: {
       '& .MuiFilledInput-root': {
@@ -50,6 +54,8 @@ const InternshipTracks = () => {
         borderRadius: '4px 0 0 4px',
         width: '60vh',
         height: '100%',
+        marginLeft: "auto",
+        marginRight: 'auto',
         [theme.breakpoints.down('md')]: {
           width: '80vw',
           marginBottom: '2rem'
@@ -64,12 +70,16 @@ const InternshipTracks = () => {
       height: '200px',
       display: 'grid',
       placeItems: 'center',
+      marginLeft: "auto",
+      marginRight: 'auto'
     },
     form: {
       width: '100%',
       height: '55px',
       display: 'flex',
       alignItems: 'center',
+      marginLeft: "auto",
+      marginRight: 'auto',
       justifyContent: 'center',
       [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
