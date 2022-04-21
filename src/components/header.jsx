@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
+import { AppBar, Toolbar, Box, Tabs, Tab, useMediaQuery, useTheme } from '@mui/material';
+
 import Logo from '../Images/LOGO (1).png';
 import Btx from '../Component/ButtonComponent';
 import DrawerComponent from '../Component/DrawerComponent';
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  Tabs,
-  Tab,
-  useMediaQuery,
-  useTheme
-} from '@mui/material';
 
 const Header = () => {
-  const PAGES = ['About', 'Services', 'Contact'];
+  const PAGES = ['about', 'services', 'contact'];
   const [value, setValue] = useState(0);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
@@ -34,14 +27,12 @@ const Header = () => {
               textColor="inherit"
               value={value}
               onChange={(e, value) => setValue(value)}
-              indicatorColor="primary"
-            >
+              indicatorColor="primary">
               {PAGES.map((page, index) => (
-                <Tab
-                  key={index}
-                  sx={{ textTransform: 'capitalize', marginLeft: '50px' }}
-                  label={page}
-                ></Tab>
+                <Tab 
+                key={index} 
+                sx={{ textTransform: 'capitalize', marginLeft: '50px' }} 
+                label={page} href={`#${page}`} />
               ))}
               <Btx spacing={{ marginLeft: '130px' }} variant="outlined">
                 <span style={{ color: 'white', textTransform: 'capitalize' }}>

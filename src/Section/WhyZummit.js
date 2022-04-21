@@ -1,11 +1,12 @@
 //commenting to test the import error issues here
 import React from 'react';
 import { Box, Grid } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import { Paragraph, Header } from '../Component/Typography';
 import PrimaryButton from '../Component/Button';
 import ReactLogo from '../Images/arrow-next.svg';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 export default function SectionTwo() {
@@ -14,7 +15,7 @@ export default function SectionTwo() {
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
-    <Box
+    <Box id='about'
       component="section"
       sx={{ py: '6rem', backgroundColor: '#DEE5EE', color: '#081F4A' }}
       px={{ xs: 3, sm: 4, md: '9rem', xl: '18rem' }}
