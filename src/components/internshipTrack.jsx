@@ -79,7 +79,7 @@ const InternshipTracks = () => {
       display: 'flex',
       alignItems: 'center',
       marginLeft: "auto",
-      marginRight: 'auto',
+      marginRight: 'auto', 
       justifyContent: 'center',
       [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
@@ -156,19 +156,19 @@ const InternshipTracks = () => {
           </InternsText>
 
           <InternsText>
-            <CheckCircleIcon style={{ color: 'green', fontSize: '15' }} />
+            <CheckCircleIcon style={{ color: 'green', fontSize: '15', marginRight:"5px" }} />
             Participate in Peer-to-peer challenges that will prepare you for job
             interviews in AI.
           </InternsText>
 
           <InternsText>
-            <CheckCircleIcon style={{ color: 'green ', fontSize: '15' }} />
+            <CheckCircleIcon style={{ color: 'green ', fontSize: '15', marginRight:"5px" }} />
             Participate in paper reviews of cutting-edge technology and
             techniques, learning the state of the art in the industry.
           </InternsText>
 
           <InternsText>
-            <CheckCircleIcon style={{ color: 'green', fontSize: '15' }} />
+            <CheckCircleIcon style={{ color: 'green', fontSize: '15', marginRight:"5px" }} />
             Build AI models with a team from end to end Learn MLops.
           </InternsText>
         </Paper>
@@ -195,19 +195,19 @@ const InternshipTracks = () => {
           </InternsText>
 
           <InternsText>
-            <CheckCircleIcon style={{ color: 'green', fontSize: '15' }} />
+            <CheckCircleIcon style={{ color: 'green', fontSize: '15', marginRight:"5px" }} />
             Participate in Peer-to-peer challenges that will prepare you for job
             interviews in software development.
           </InternsText>
 
           <InternsText>
-            <CheckCircleIcon style={{ color: 'green', fontSize: '15' }} />
+            <CheckCircleIcon style={{ color: 'green', fontSize: '15', marginRight:"5px" }} />
             Learn how to build solutions using cutting-edge and in-demand
             technologies.{' '}
           </InternsText>
 
           <InternsText>
-            <CheckCircleIcon style={{ color: 'green', fontSize: '15' }} />
+            <CheckCircleIcon style={{ color: 'green', fontSize: '15', marginRight:"5px" }} />
             Build real-world solutions.{' '}
           </InternsText>
         </Paper>
@@ -237,7 +237,7 @@ const InternshipTracks = () => {
           <InternsText>
             <CheckCircleIcon
               fontSize="small"
-              style={{ color: 'green', fontSize: '15' }}
+              style={{ color: 'green', fontSize: '15', marginRight:"5px" }}
             />
             Learn to collect, clean and analyze messy data.
           </InternsText>
@@ -245,7 +245,7 @@ const InternshipTracks = () => {
           <InternsText>
             <CheckCircleIcon
               fontSize="small"
-              style={{ color: 'green', fontSize: '15' }}
+              style={{ color: 'green', fontSize: '15', marginRight:"5px" }}
             />
             Solve business problems with data.
           </InternsText>
@@ -253,7 +253,7 @@ const InternshipTracks = () => {
           <InternsText>
             <CheckCircleIcon
               fontSize="small"
-              style={{ color: 'green', fontSize: '15' }}
+              style={{ color: 'green', fontSize: '15', marginRight:"5px" }}
             />
             Build and deploy machine learning models at scale.
           </InternsText>
