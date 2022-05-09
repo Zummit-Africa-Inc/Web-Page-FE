@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
-
+import ReactGa from 'react-ga';
 import { AIinAction, ContactSection, Hero, SectionFour, SectionTwo, LeverageSection, InternshipSection, FooterSection, BrandSection } from './Section/index';
 
 function App() {
+  useEffect (() => {
+    ReactGa.initialize('UA-228095551-1')
+
+    //to report pageview
+    ReactGa.pageview('/')
+  }, []);
   return (
     <>
       <Hero />
