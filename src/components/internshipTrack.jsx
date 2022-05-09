@@ -133,7 +133,7 @@ const InternshipTracks = () => {
 
             <Typography
               component="p"
-              sx={{ fontSize: '15px', display: 'flex', paddingBottom: '10px' }}
+              sx={{ fontSize: '15px', display: 'flex', paddingBottom: '6px' }}
               className={classes.text}
             >
               Deep Learing
@@ -173,7 +173,7 @@ const InternshipTracks = () => {
             />
             <Typography
               component="p"
-              sx={{ fontSize: '15px', display: 'flex', paddingBottom: '10px' }}
+              sx={{ fontSize: '15px', display: 'flex', paddingBottom: '6px' }}
               className={classes.text}
             >
               Web Development
@@ -212,7 +212,7 @@ const InternshipTracks = () => {
             />
             <Typography
               component="p"
-              sx={{ fontSize: '15px', display: 'flex', paddingBottom: '10px' }}
+              sx={{ fontSize: '15px', display: 'flex', paddingBottom: '6px' }}
               className={classes.text}
             >
               Data Science
