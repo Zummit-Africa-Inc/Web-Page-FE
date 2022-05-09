@@ -9,7 +9,7 @@ function App() {
 
     //to report pageview
     ReactGa.pageview('/')
-  }, []);
+  }, [])
   return (
     <>
       <Hero />
