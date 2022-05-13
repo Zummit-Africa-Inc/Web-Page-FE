@@ -4,6 +4,7 @@ import ReactGa from 'react-ga';
 import { AIinAction, ContactSection, Hero, SectionFour, SectionTwo, LeverageSection, InternshipSection, FooterSection, BrandSection } from './Section/index';
 
 function App() {
+  //Google analytics
   useEffect (() => {
     ReactGa.initialize('UA-228095551-1')
 
