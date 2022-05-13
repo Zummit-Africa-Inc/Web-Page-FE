@@ -7,7 +7,7 @@ import { AIinAction, ContactSection, Hero, SectionFour, SectionTwo, LeverageSect
 function App() {
   //Google Analytics
   useEffect (() => {
-    ReactGa.initialize ('UA-223436913-1')
+    ReactGa.initialize (process.env.GA_TRACKING_ID )
 
     //To report pageview
     ReactGa.pageview('/App')
