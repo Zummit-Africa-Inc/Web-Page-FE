@@ -8,6 +8,7 @@ import { Paragraph, Header } from '../Component/Typography';
 import PrimaryButton from '../Component/Button';
 import ReactLogo from '../Images/arrow-next.svg';
 
+
 export default function SectionTwo() {
   // MaterialUI breakpoints Hook
   const theme = useTheme();

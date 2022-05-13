@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import ReactGa from 'react-ga'
 
 import { AIinAction, ContactSection, Hero, SectionFour, SectionTwo, LeverageSection, InternshipSection, FooterSection, BrandSection } from './Section/index';
 
 function App() {
+  //Google Analytics
+  useEffect (() => {
+    ReactGa.initialize (process.env.REACT_APP_GA_TRACKING_ID )
+
+    //To report pageview
+    ReactGa.pageview('/App')
+
+  }, [])
   return (
     <>
       <Hero />
