@@ -13,6 +13,8 @@ function App() {
     ReactGa.pageview('/App')
 
   }, [])
+   
+  
   return (
     <>
       <Hero />
