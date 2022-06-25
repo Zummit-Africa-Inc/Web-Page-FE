@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import React from 'react';
 
 import Logo from '../Images/LOGO.png';
-import Facebook from '../Images/Facebook.png';
+import Instagram from '../Images/instagram.png';
 import Twitter from '../Images/Twitter.png';
 import Linkedln from '../Images/Linkedln.png';
 //Material UI icons
@@ -47,8 +47,8 @@ export default function FooterSection() {
             fontSize={16}
             fontWeight={500}
           >
-            256 Chapman Road STE <br /> 105-4, Newark. Newcastle <br />{' '}
-            Delaware, USA.
+            2055 Limestone Rd STE <br /> 200-C, Wilmington, DE, New Castle, <br />{' '}
+            US, 19808.
           </Typography>
           <Typography display="block" py={1} fontSize={16} fontWeight={500}>
             TOJA Southern View Estate, <br /> Lekki - Lagos, Nigeria
@@ -172,15 +172,21 @@ export default function FooterSection() {
       <div id='contact'>
       <Grid container mt={{ xs: '2rem', sm: 4, md: 6, lg: 4 }}>
         <Grid item xs={12} lg={6} fontSize={10}>
+        <Link href="https://mobile.twitter.com/zummitafrica" underline="none" color="#081F4A">
           <Box mt={4} mr={{ xs: '1rem', lg: '1rem' }} display="inline-block">
             <img src={Twitter} alt="Twitter" />
           </Box>
-          <Box mt={4} mr={{ xs: '1rem', lg: '1rem' }} display="inline-block">
-            <img src={Facebook} alt="Facebook" />
+        </Link>
+        <Link href="https://www.instagram.com/zummitafrica/" underline="none" color="#081F4A">
+          <Box mt={4} mr={{ xs: '1rem', lg: '1rem' }} style={{color:'#081F4A'}} display="inline-block">
+            <img src={Instagram} alt="Instagram" />
           </Box>
+        </Link>
+        <Link href="https://www.linkedin.com/company/zummit-africa/" underline="none" color="#081F4A">
           <Box mt={4} mr={{ xs: '1rem', lg: '1rem' }} display="inline-block">
             <img src={Linkedln} alt="Linkedln" />
           </Box>
+        </Link>
         </Grid>
 
         <Grid
