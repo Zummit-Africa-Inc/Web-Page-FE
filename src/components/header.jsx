@@ -34,7 +34,12 @@ const Header = () => {
                 sx={{ textTransform: 'capitalize', marginLeft: '50px' }} 
                 label={page} href={`#${page}`} />
               ))}
-              <Btx spacing={{ marginLeft: '130px' }} variant="outlined">
+              <Btx spacing={{ marginLeft: '100px' }} variant="outlined">
+                <span style={{ color: 'white', textTransform: 'capitalize' }}>
+                  <a href="/academy">Academy</a>
+                </span>
+              </Btx>
+              <Btx spacing={{ marginLeft: '100px' }} variant="outlined">
                 <span style={{ color: 'white', textTransform: 'capitalize' }}>
                   <a href="#demo">Request a demo</a>
                 </span>
