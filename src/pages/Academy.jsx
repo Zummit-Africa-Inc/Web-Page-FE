@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { AcademyHero } from '../Section';
 
 const Academy = () => {
   return (
-    <div>Academy</div>
-  )
-}
+    <div>
+      <AcademyHero />
+    </div>
+  );
+};
 
-export default Academy
+export default Academy;
