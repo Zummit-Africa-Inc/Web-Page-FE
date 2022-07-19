@@ -3,8 +3,7 @@ import './App.css';
 import ReactGa from 'react-ga'
 import { Routes, Route } from 'react-router-dom'
 
-import Home from './pages/Home';
-import Academy from './pages/Academy'
+import { Academy, Home } from './pages';
 
 function App() {
   //Google Analytics
