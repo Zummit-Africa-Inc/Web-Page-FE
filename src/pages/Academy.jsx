@@ -2,7 +2,7 @@ import React from 'react'
 import { Stack } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
-import { AcadWhyZummit } from '../Section'
+import { AcademyHero, AcadWhyZummit } from '../Section'
 
 const useStyles = makeStyles({
     root: {},
@@ -13,9 +13,10 @@ const Academy = () => {
 
   return (
     <Stack className={classes.root}>
+      <AcademyHero />
       <AcadWhyZummit />
     </Stack>
   )
 }
 
-export default Academy
+export default Academy;

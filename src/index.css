@@ -8,6 +8,19 @@
   --live-bg: rgba(236, 242, 253, 0.6);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
