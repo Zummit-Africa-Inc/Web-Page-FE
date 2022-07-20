@@ -1,4 +1,5 @@
 export { default as AIinAction } from './AIinAction'
+export { default as AcadWhyZummit } from './AcadWhyZummit'
 export { default as BrandSection } from './BrandSection'
 export { default as ContactSection } from './ContactSection'
 export { default as FooterSection } from './FooterSection'
