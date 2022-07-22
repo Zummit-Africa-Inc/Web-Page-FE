@@ -4,6 +4,7 @@ import ReactGa from 'react-ga';
 import { Routes, Route } from 'react-router-dom';
 
 import { Academy, Home } from './pages';
+import { PaystackIntegration } from './components';
 
 function App() {
   //Google Analytics
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/payments" element={<PaystackIntegration />} />
       </Routes>
     </>
   );
