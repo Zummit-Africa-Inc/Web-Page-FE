@@ -65,14 +65,14 @@ const PaystackIntegration = () => {
       },
       callback: async function (response) {
 
-        console.log(response)
-
-        // window.location.href = `${base_url}/payments/verification?ref=${response.reference}`
+        // window.location.href = `${base_url}/payments/verification/?ref=${response.reference}`
 
         try {
-          const res = await axios.post(`${base_url}/payments/verification`, response.reference)
+          const res = await axios.post(`${base_url}/payments/verification?ref=${response.reference}`, response.reference)
           // const data = await res.json()
-          console.log(res)
+         if (res.data.success) {
+          window.location.href = '/payments/verify'
+         }
         }catch (err) {
           console.log(err.message)
         }
