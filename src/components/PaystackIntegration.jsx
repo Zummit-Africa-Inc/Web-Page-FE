@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
 import PaystackPop from '@paystack/inline-js'
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'
+import { AppBar, Box, Button, Grid, TextField, Toolbar, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import axios from 'axios'
+import Logo from '../Images/LOGO.png'
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 
 const useStyles = makeStyles({
   // box: {
   //   background: '#081f4a',
   // },
   form: {
-    margin: '3rem auto',
+    margin: '0 auto',
     width: '40%',
     display: 'flex',
     gap: '2rem',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 })
 
 const key = process.env.REACT_APP_PAYSTACK_KEY
@@ -40,7 +40,7 @@ const PaystackIntegration = () => {
         const res = await axios.get(`${base_url}/course`)
         setCourses(res.data.data[0])
         setAmount(res.data.data[0].price)
-        
+        setId(res.data.data[0].id)
       } catch(err) {
         
       }
@@ -63,49 +63,36 @@ const PaystackIntegration = () => {
         last_name: lastName,
         course_id: id
       },
+      onClose: function () {
+        alert('closed window')
+      },
       callback: async function (response) {
-
-        // window.location.href = `${base_url}/payments/verification/?ref=${response.reference}`
-
         try {
           const res = await axios.post(`${base_url}/payments/verification?ref=${response.reference}`, response.reference)
-          // const data = await res.json()
          if (res.data.success) {
-          window.location.href = '/payments/verify'
+          window.location.href = `/payments/verify/${response.reference}`
          }
         }catch (err) {
-          console.log(err.message)
+          alert(err.message)
         }
       }
     })
   }
   return (
-    <>
-      <Box>
-        <Typography variant='h6' textAlign='center'>Payment Gateway</Typography>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            justifyContent: 'center'
-          }}
-        >
-
-          <Grid item>
-            <Button href='/academy'
-              variant="contained"
-              sx={{
-                backgroundColor: '#FFEA00',
-                borderRadius: '10px',
-                padding: '10px 10px',
-                color: '#000',
-                fontSize: '10px'
-              }}
-            >
-              Back to Academy
-            </Button>
-          </Grid>
-        </Grid>
+    <> 
+    <AppBar>
+    <Toolbar
+      sx={{
+        background: '#f9f8f8',
+        display: 'flex',
+        justifyContent: 'space-between'
+      }}
+    >
+      <img src={Logo} alt="zummit-logo" />
+    </Toolbar>
+  </AppBar>
+      <Box className={classes.box}>
+        <Typography variant='h3' textAlign='center' sx={{ marginTop: '6rem' }} gutterBottom>Checkout Page</Typography>
         <form className={classes.form}>
           <TextField
             required
