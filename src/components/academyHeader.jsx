@@ -24,7 +24,7 @@ function AcademyHeader() {
             >
               LEARN MORE
             </Button>
-            <Button
+            <Button href='/payments'
               variation="h6"
               sx={{
                 color: '#081F4A',
