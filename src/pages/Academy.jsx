@@ -8,7 +8,8 @@ import {
   AcadWhyZummit,
   AcaSecTwo,
   CurriculumSection,
-  Testimonials
+  Testimonials,
+  Pricing
 } from '../Section';
 
 const useStyles = makeStyles({
