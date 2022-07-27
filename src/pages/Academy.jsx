@@ -1,8 +1,15 @@
 import React from 'react';
 import { Stack } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-
-import { AcademyHero, AcadWhyZummit, AcaSecTwo, Testimonials } from '../Section';
+import {
+  AcademyFooter,
+  AcademyHero,
+  AcadWhyZummit,
+  AcaSecTwo,
+  CurriculumSection,
+  // Pricing,
+  Testimonials
+} from '../Section';
 
 const useStyles = makeStyles({
   root: {}
@@ -16,7 +23,10 @@ const Academy = () => {
       <AcademyHero />
       <AcaSecTwo />
       <AcadWhyZummit />
+      <CurriculumSection />
       <Testimonials />
+      {/* <Pricing />
+      <AcademyFooter /> */}
     </Stack>
   );
 };

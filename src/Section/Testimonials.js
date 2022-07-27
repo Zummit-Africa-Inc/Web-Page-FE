@@ -13,7 +13,7 @@ const Testimonials = () => {
                     component='h2'
                     sx={{
                         textAlign: 'center',
-                        margin: '1.5rem 0',
+                        marginBottom: '1.5rem',
                         color: '#081F4A',
                         fontSize: '1rem',
                         lineHeight: '24px',

@@ -2,30 +2,30 @@ export const exampleText = [
   {
     id: 1,
     title: 'Increase your income',
-    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.',
+    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.'
   },
   {
     id: 2,
     title: 'Increase your income',
-    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.',
+    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.'
   },
   {
     id: 3,
     title: 'Increase your income',
-    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.',
-  },
-]
+    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.'
+  }
+];
 
 export const exampleText2 = [
   {
     id: 1,
     title: 'Live Classes',
-    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.',
+    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.'
   },
   {
     id: 2,
     title: 'Live Classes',
-    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.',
+    text: 'Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert.'
   },
   {
     id: 3,
@@ -93,3 +93,22 @@ export const testimonialText5 = {
   title: 'Data Scientist',
   text: '"For me participating in the Zummit Africa Internship has been a live changing experience for me has I have witnessed tremendous growth in terms of collaborating with other data science intern from diverse culture and background and also having a first-hand experience working on various machine learning and deep learning algorithms and dataset. I want to say a big thank you to Zummit Africa for the this wonderfully opportunity that has been given to us."'
 }
+
+export const exampleText3 = [
+  {
+    id: 1,
+    text: 'Programming with Python'
+  },
+  {
+    id: 2,
+    text: 'SQL &  Business Intelligence'
+  },
+  {
+    id: 3,
+    text: 'Data Analysis & Visualization'
+  },
+  {
+    id: 4,
+    text: 'Statistics for Data Science'
+  }
+];
