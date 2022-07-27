@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import { AcademyHero, AcadWhyZummit, AcaSecTwo } from '../Section';
+import { AcademyHero, AcadWhyZummit, AcaSecTwo, Testimonials } from '../Section';
 
 const useStyles = makeStyles({
   root: {}
@@ -16,6 +16,7 @@ const Academy = () => {
       <AcademyHero />
       <AcaSecTwo />
       <AcadWhyZummit />
+      <Testimonials />
     </Stack>
   );
 };
