@@ -9,20 +9,6 @@ const Testimonials = () => {
         <Stack>
             <Stack className='testimonial-section'>
                 <Typography
-                    variant='h6'
-                    component='h2'
-                    sx={{
-                        textAlign: 'center',
-                        marginBottom: '1.5rem',
-                        color: '#081F4A',
-                        fontSize: '1rem',
-                        lineHeight: '24px',
-                        textTransform: 'uppercase'
-                    }}
-                >
-                    Testimonials
-                </Typography>
-                <Typography
                     sx={{
                         textAlign: 'center',
                         fontWeight: '700',
@@ -34,13 +20,13 @@ const Testimonials = () => {
                     What Our Interns have Said
                 </Typography>
                 <Box sx={{marginTop: '2rem'}}>
-                    <Grid container sx={{ display: 'flex', justifyContent: 'center' }} spacing={4}>
-                        <Grid container item sx={{ width: '400px' }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'center', }} spacing={4}>
+                        <Grid container item sx={{ width: '320px' }}>
                             <Grid item>
                                 <TestimonialCard name={testimonialText1.name} title={testimonialText1.title} text={testimonialText1.text} />
                             </Grid>
                         </Grid>
-                        <Grid container item sx={{ width: '400px' }}>
+                        <Grid container item sx={{ width: '320px' }}>
                             <Grid item sx={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
                                 <TestimonialCard name={testimonialText2.name} title={testimonialText2.title} text={testimonialText2.text} />
@@ -50,7 +36,7 @@ const Testimonials = () => {
 
                             </Grid>
                         </Grid>
-                        <Grid container item sx={{ width: '400px' }}>
+                        <Grid container item sx={{ width: '320px' }}>
 
                             <Grid item sx={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
