@@ -8,7 +8,8 @@ import {
   AcaSecTwo,
   CurriculumSection,
   Pricing,
-  Testimonials
+  Testimonials,
+  UpcomingSection
 } from '../Section';
 
 const useStyles = makeStyles({
@@ -25,8 +26,9 @@ const Academy = () => {
       <AcadWhyZummit />
       <CurriculumSection />
       <Testimonials />
-      {/* <Pricing />
-      <AcademyFooter /> */}
+      <Pricing />
+      <UpcomingSection />
+      <AcademyFooter />
     </Stack>
   );
 };
