@@ -14,3 +14,4 @@ export { default as CurriculumSection } from './Curriculum';
 export { default as Testimonials } from './Testimonials';
 export { default as AcademyFooter } from './AcaFooter';
 export { default as Pricing } from './Pricing';
+export { default as UpcomingSection } from './UpcomingSection'

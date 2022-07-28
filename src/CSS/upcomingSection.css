@@ -1,0 +1,16 @@
+.writingImage {
+    position: absolute;
+    left: -20%;
+    top: -20%;
+}
+
+@media (max-width: 800px) {
+
+    br {
+        display: none;
+    }
+
+    .writingImage {
+        display: none;
+    }
+}
