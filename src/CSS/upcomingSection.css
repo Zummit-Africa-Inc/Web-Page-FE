@@ -5,21 +5,9 @@
 }
 
 @media (max-width: 800px) {
-    .upcomingSection {
-        justify-content: center;
-        align-items: center;
-        padding-top: 10rem;
-    }
 
-    .box {
-        width: max-content;
-        height: max-content;
-
-    }
-
-    .boxText {
-        text-align: center;
-        align-items: center;
+    br {
+        display: none;
     }
 
     .writingImage {
