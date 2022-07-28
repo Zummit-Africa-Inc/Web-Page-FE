@@ -4,16 +4,40 @@ import React from 'react';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 
 import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
 
 const useStyles = makeStyles({
   pricing: {
     width: '100%',
-    padding: '62px 20px 120px',
+    padding: '30px 20px 80px',
     backgroundColor: '#081F4A',
     display: 'flex',
     justifyContent: 'center'
   }
 });
+
+const StyledButton = styled(Button)`
+  background-color: '#FFEA00';
+  color: #fff;
+  &:hover {
+    background-color: #b9aa04;
+  }
+  &:focus {
+    background-color: #6e6500;
+  }
+`;
+
+const StyledButton2 = styled(Button)`
+  color: #ffea00;
+  &:hover {
+    border-color: #b9aa04;
+    color: #b9aa04;
+  }
+  &:focus {
+    border-color: #6e6500;
+    color: #6e6500;
+  }
+`;
 
 const Priciing = () => {
   const classes = useStyles();
@@ -27,7 +51,7 @@ const Priciing = () => {
           flexDirection: 'column'
         }}
       >
-        <Typography
+        {/* <Typography
           variant="subtitle1"
           textTransform="uppercase"
           my={4}
@@ -37,11 +61,11 @@ const Priciing = () => {
           color="#ECF2FD"
         >
           Pricing
-        </Typography>
+        </Typography> */}
         <Typography
           variant="h3"
           textTransform="uppercase"
-          my={4}
+          mb={4}
           sx={{
             alignSelf: 'center',
             color: '#ECF2FD',
@@ -58,8 +82,8 @@ const Priciing = () => {
           <Grid
             sx={{
               background: '#E8EEF7',
-              width: '400px',
-              padding: '40px',
+              width: '350px',
+              padding: '30px',
               borderRadius: '20px 20px 0px 0px'
             }}
           >
@@ -68,7 +92,7 @@ const Priciing = () => {
               sx={{
                 textDecorationLine: 'line-through',
                 fontWeight: '500',
-                fontSize: '32px',
+                fontSize: '22px',
                 color: 'rgba(8, 31, 74, 0.348)',
                 fontStyle: 'italic'
               }}
@@ -86,7 +110,7 @@ const Priciing = () => {
                 sx={{
                   color: '#081f4a',
                   fontWeight: '700',
-                  fontSize: '50px',
+                  fontSize: '40px',
                   fontStyle: 'italic',
                   marginRight: '10px'
                 }}
@@ -99,7 +123,7 @@ const Priciing = () => {
                   color: 'rgba(8, 31, 74, 0.9)',
                   fontWeight: '700',
                   fontStyle: 'italic',
-                  fontSize: '32px'
+                  fontSize: '22px'
                 }}
               >
                 (₦60,000)
@@ -109,25 +133,26 @@ const Priciing = () => {
           <Grid
             sx={{
               background: '#FFFCD9',
-              width: '400px',
+              width: '350px',
               borderRadius: '0px 0px 20px 20px',
-              padding: '45px 45px 45px 45px'
+              padding: '30px 45px 30px 45px'
             }}
           >
             <Grid
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '22px'
+                marginBottom: '10px'
               }}
             >
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 600+ hours of coursework
               </Typography>
             </Grid>
@@ -135,16 +160,17 @@ const Priciing = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '22px'
+                marginBottom: '10px'
               }}
             >
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 4 real-world portfolio projects
               </Typography>
             </Grid>
@@ -152,16 +178,17 @@ const Priciing = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '22px'
+                marginBottom: '10px'
               }}
             >
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 24 weeks part-time program
               </Typography>
             </Grid>
@@ -169,16 +196,17 @@ const Priciing = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '22px'
+                marginBottom: '10px'
               }}
             >
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 Mentorship with Industry experts
               </Typography>
             </Grid>
@@ -186,16 +214,17 @@ const Priciing = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '22px'
+                marginBottom: '10px'
               }}
             >
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 12 months career assistance
               </Typography>
             </Grid>
@@ -203,16 +232,17 @@ const Priciing = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '22px'
+                marginBottom: '10px'
               }}
             >
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 12 months career assistance
               </Typography>
             </Grid>
@@ -225,10 +255,11 @@ const Priciing = () => {
               <CheckCircleOutlineOutlinedIcon
                 sx={{
                   marginRight: '15px',
-                  color: '#77C900'
+                  color: '#77C900',
+                  fontSize: '20px'
                 }}
               />
-              <Typography variant="h6" color="#081F4A" fontWeight={400}>
+              <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
                 14 days money back guarantee
               </Typography>
             </Grid>
@@ -240,33 +271,34 @@ const Priciing = () => {
             display: 'flex',
             alignSelf: 'center',
             justifyContent: 'space-between',
-            width: '400px',
+            width: '350px',
             paddingTop: '10px'
           }}
         >
-          <Button
+          <StyledButton
             textTransform="uppercase"
             variant="contained"
             sx={{
               background: '#FFEA00',
-              width: '200px',
-              height: '60px'
+              width: '150px',
+              height: '50px'
+              // padding: '6px 12px'
             }}
           >
             Enroll Now
-          </Button>
-          <Button
+          </StyledButton>
+          <StyledButton2
             textTransform="uppercase"
             variant="outlined"
             sx={{
               borderColor: '#FFEA00',
               color: '#FFEA00',
-              width: '200px',
-              height: '60px'
+              width: '150px',
+              height: '50px'
             }}
           >
             Get in touch
-          </Button>
+          </StyledButton2>
         </Grid>
       </Grid>
     </Stack>

@@ -25,8 +25,8 @@ const Academy = () => {
       <AcadWhyZummit />
       <CurriculumSection />
       <Testimonials />
-      {/* <Pricing />
-      <AcademyFooter /> */}
+      <Pricing />
+      <AcademyFooter />
     </Stack>
   );
 };
