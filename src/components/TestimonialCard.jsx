@@ -6,7 +6,7 @@ import '../CSS/testimonial.css'
 const TestimonialCard = ({ name, title, text }) => {
     return (
         <Card sx={{
-            width: '387px',
+            width: '300px',
             background: 'rgba(255, 255, 255, 0.5)',
             boxShadow: '0px 2px 12px rgba(8, 31, 74, 0.25)',
             borderRadius: '10px'
