@@ -2,6 +2,8 @@ import { Button, Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import '../CSS/upcomingSection.css'
 import writingImage from '../Images/writingImage.png'
+import EllipsesTop from '../Images/EllipsesTop.png'
+import EllipsesBtm from '../Images/EllipsesBtm.png'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
@@ -108,6 +110,10 @@ const UpcomingSection = () => {
                 </Stack>
                 <Stack>
                     <img className='writingImage' src={writingImage} alt="writing" />
+                </Stack>
+                <Stack>
+                    <img className='EllipsesTop' src={EllipsesTop} alt="ellipsesTop" />
+                    <img className='EllipsesBtm' src={EllipsesBtm} alt="ellipsesBtm" />
                 </Stack>
             </Stack>
         </Box>
