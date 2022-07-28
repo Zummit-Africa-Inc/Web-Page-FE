@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import ReactGa from 'react-ga';
 
-import { Academy, Home } from './pages';
+import { Academy, Home, Verify } from './pages';
+import { PaystackIntegration } from './components';
 import { theme } from './theme';
 import './App.css';
 
@@ -21,6 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/payments" element={<PaystackIntegration />} />
+        <Route path="/payments/verify/:ref" element={<Verify />} />
       </Routes>
     </ThemeProvider>
   );

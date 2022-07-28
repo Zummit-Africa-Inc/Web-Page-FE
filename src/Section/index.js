@@ -1,12 +1,16 @@
-export { default as AIinAction } from './AIinAction'
-export { default as AcadWhyZummit } from './AcadWhyZummit'
-export { default as BrandSection } from './BrandSection'
-export { default as ContactSection } from './ContactSection'
-export { default as FooterSection } from './FooterSection'
-export { default as Hero } from './Hero'
-export { default as InternshipSection } from './InternshipSection'
-export { default as LeverageSection } from './LeverageSection'
-export { default as SectionFour } from './SectionFour'
-export { default as SectionTwo } from './WhyZummit'
-export {default as AcademyHero}  from './AcademyHero'
-export {default as AcaSecTwo} from './AcaSecTwo'
+export { default as AIinAction } from './AIinAction';
+export { default as AcadWhyZummit } from './AcadWhyZummit';
+export { default as BrandSection } from './BrandSection';
+export { default as ContactSection } from './ContactSection';
+export { default as FooterSection } from './FooterSection';
+export { default as Hero } from './Hero';
+export { default as InternshipSection } from './InternshipSection';
+export { default as LeverageSection } from './LeverageSection';
+export { default as SectionFour } from './SectionFour';
+export { default as SectionTwo } from './WhyZummit';
+export { default as AcademyHero } from './AcademyHero';
+export { default as AcaSecTwo } from './AcaSecTwo';
+export { default as CurriculumSection } from './Curriculum';
+export { default as Testimonials } from './Testimonials';
+export { default as AcademyFooter } from './AcaFooter';
+export { default as Pricing } from './Pricing';

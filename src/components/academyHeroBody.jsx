@@ -52,7 +52,7 @@ function AcademyHeroBody() {
                   }}
                 >
                   <Grid item>
-                    <Button
+                    <Button href='/payments'
                       variant="contained"
                       sx={{
                         backgroundColor: '#FFEA00',
@@ -125,7 +125,7 @@ function AcademyHeroBody() {
                 }}
               >
                 <Grid item>
-                  <Button
+                  <Button href='/payments'
                     variant="contained"
                     size="small"
                     sx={{
