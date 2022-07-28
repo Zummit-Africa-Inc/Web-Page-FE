@@ -3,9 +3,12 @@
 :root {
   --color-primary: #081F4A;
   --color-secondary: #C5D7F9;
+  --color-secondary-light: #ECF2FD;
+  --color-text-secondary: #5B6773;
   --color-yellow: #FFEA00;
   --color-white: #FFFFFF;
   --live-bg: rgba(236, 242, 253, 0.6);
+  --body-font: 'Lato', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +33,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 a {
