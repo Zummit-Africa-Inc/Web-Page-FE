@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-  --color-primary: #081f4a;
-  --color-secondary: #c5d7f9;
-  --color-yellow: #ffea00;
-  --color-white: #ffffff;
+  --color-primary: #081F4A;
+  --color-secondary: #C5D7F9;
+  --color-secondary-light: #ECF2FD;
+  --color-text-secondary: #5B6773;
+  --color-yellow: #FFEA00;
+  --color-white: #FFFFFF;
   --live-bg: rgba(236, 242, 253, 0.6);
+  --body-font: 'Lato', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +33,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 a {

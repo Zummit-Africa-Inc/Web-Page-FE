@@ -1,5 +1,4 @@
 import React from 'react'
-import { Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import { AttachMoney } from '@mui/icons-material'
 
@@ -10,7 +9,7 @@ const useStyles = makeStyles({
         alignItems: 'flex-start',
         justifyContent: 'center',
         width: 300,
-        height: 200,
+        height: 250,
         backgroundColor: 'transparent',
         color: 'var(--color-primary)',
         borderRadius: 20,
@@ -19,7 +18,8 @@ const useStyles = makeStyles({
     },
     iconContainer: {
         width: 82,
-        height: 82,
+        height: 72,
+        background: "var(--color-secondary-light)",
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -32,9 +32,21 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        border: '1px solid var(--color-primary)',
+        border: '3px solid var(--color-primary)',
         borderRadius: 10,
         color: 'var(--color-primary)',
+    },
+    title: {
+        fontSize: 32,
+        fontWeight: 600,
+        textTransform: 'uppercase',
+        color: 'var(--color-primary)',
+        margin: "5px 0 10px 0",
+    },
+    text: {
+        fontSize: 18,
+        fontWeight: 400,
+        color: 'var(--color-text-secondary)',
     },
 })
 
@@ -48,12 +60,12 @@ const ClassesCard = ({title,text}) => {
                 &bull;<AttachMoney />&bull;
             </div>
         </div>
-        <Typography variant='h6' my={1} textTransform='uppercase'>
+        <h2 className={classes.title}>
             {title}
-        </Typography>
-        <Typography variant='body1'>
+        </h2>
+        <p className={classes.text}>
             {text}
-        </Typography>
+        </p>
     </div>
   )
 }

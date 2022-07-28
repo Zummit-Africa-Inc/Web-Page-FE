@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import './App.css';
-import ReactGa from 'react-ga';
 import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
+import ReactGa from 'react-ga';
 
 import { Academy, Home, Verify } from './pages';
 import { PaystackIntegration } from './components';
+import { theme } from './theme';
+import './App.css';
 
 function App() {
   //Google Analytics
@@ -16,14 +18,14 @@ function App() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/payments" element={<PaystackIntegration />} />
         <Route path="/payments/verify/:ref" element={<Verify />} />
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }
 
