@@ -1,7 +1,6 @@
 import React from 'react';
 import { Stack } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-
 import {
   AcademyFooter,
   AcademyHero,
@@ -26,8 +25,8 @@ const Academy = () => {
       <AcadWhyZummit />
       <CurriculumSection />
       <Testimonials />
-      <Pricing />
-      <AcademyFooter />
+      {/* <Pricing />
+      <AcademyFooter /> */}
     </Stack>
   );
 };
