@@ -1,0 +1,26 @@
+.testimonial-section {
+    padding: 4rem 0;
+    height: max-content;
+    background: radial-gradient(48.41% 206.28% at 44.72% 44.64%,
+            rgba(255, 234, 0, 0.2) 3.65%,
+            rgba(8, 31, 74, 0.2) 100%);
+
+
+}
+
+.name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #081F4A;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1758D1;
+    text-transform: uppercase;
+}
