@@ -55,6 +55,12 @@ const DrawerComponent = () => {
             ))}
           </List>
           <Button
+            spacing={{ marginRight: '40px', marginLeft: '40px', marginBottom:'20px' }}
+            variant="outlined" onClick={() => setOpenDrawer(false)}
+          >
+            <a href='/academy'>Academy</a>
+          </Button>
+          <Button
             spacing={{ marginRight: '40px', marginLeft: '40px' }}
             variant="outlined" onClick={() => setOpenDrawer(false)}
           >

@@ -1,22 +1,23 @@
-import React from 'react'
-import { Stack } from '@mui/material'
-import { makeStyles } from '@mui/styles'
+import React from 'react';
+import { Stack } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
-import { AcademyHero, AcadWhyZummit } from '../Section'
+import { AcademyHero, AcadWhyZummit, AcaSecTwo } from '../Section';
 
 const useStyles = makeStyles({
-    root: {},
-})
+  root: {}
+});
 
 const Academy = () => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Stack className={classes.root}>
       <AcademyHero />
+      <AcaSecTwo />
       <AcadWhyZummit />
     </Stack>
-  )
-}
+  );
+};
 
 export default Academy;
