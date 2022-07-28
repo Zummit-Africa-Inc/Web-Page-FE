@@ -12,5 +12,5 @@ export { default as AcademyHero } from './AcademyHero';
 export { default as AcaSecTwo } from './AcaSecTwo';
 export { default as CurriculumSection } from './Curriculum';
 export { default as Testimonials } from './Testimonials';
-export { default as AcademyFooter } from './AcaFooter';
-export { default as Pricing } from './Priciing';
+// export { default as AcademyFooter } from './AcaFooter';
+// export { default as Pricing } from './Pricing';
