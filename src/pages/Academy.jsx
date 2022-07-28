@@ -7,7 +7,7 @@ import {
   AcadWhyZummit,
   AcaSecTwo,
   CurriculumSection,
-  // Pricing,
+  Pricing,
   Testimonials
 } from '../Section';
 
