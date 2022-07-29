@@ -1,0 +1,30 @@
+.writingImage {
+    position: absolute;
+    left: -10%;
+    top: -20%;
+}
+
+.EllipsesTop {
+    position: absolute;
+    left: 10%;
+    top: -8%;
+}
+
+.EllipsesBtm {
+    position: absolute;
+    right: -8%;
+    bottom: -8%;
+}
+
+
+
+@media (max-width: 800px) {
+
+    br {
+        display: none;
+    }
+
+    .writingImage {
+        display: none;
+    }
+}

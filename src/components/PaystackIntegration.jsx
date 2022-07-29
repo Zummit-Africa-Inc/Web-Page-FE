@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PaystackPop from '@paystack/inline-js'
-import { AppBar, Box, Button, Grid, TextField, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, TextField, Toolbar, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import axios from 'axios'
 import Logo from '../Images/LOGO.png'
@@ -55,6 +55,7 @@ const PaystackIntegration = () => {
     paystackPay.newTransaction({
       key: key,
       amount: amount * 100,
+      currency: 'NGN',
       email,
       firstName,
       lastName,
