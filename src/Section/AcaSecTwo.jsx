@@ -12,6 +12,7 @@ function AcaSecTwo() {
         display: 'grid',
         placeItems: 'center',
         padding: '10px 2px 100px 2px'
+        background: 'rgba(255, 255, 255, 0.4)'
       }}
     >
       <Container align="center">
