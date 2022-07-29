@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Box, Button } from '@mui/material';
-import Logo from '../Images/LOGO.png';
+import Logo from '../Images/acaLogo.png';
 
 function AcademyHeader() {
   return (
@@ -24,7 +24,8 @@ function AcademyHeader() {
             >
               LEARN MORE
             </Button>
-            <Button href='/payments'
+            <Button
+              href="/payments"
               variation="h6"
               sx={{
                 color: '#081F4A',
