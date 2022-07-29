@@ -13,10 +13,6 @@ function AcaSecTwo() {
       }}
     >
       <Container align="center">
-        <Typography variant="subtitle1" my={2} textTransform="uppercase">
-          Online Live Classes
-        </Typography>
-
         <Typography
           variant="h2"
           textTransform="capitalize"

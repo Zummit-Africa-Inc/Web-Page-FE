@@ -18,10 +18,6 @@ const AcadWhyZummit = () => {
 
   return (
     <Stack className={classes.whyZummit}>
-        <Typography variant='subtitle1' fontSize={16} fontWeight={400} color="text.primary" my={2} textTransform='uppercase'>
-          What makes us unique
-        </Typography>
-
         <Typography variant='h2' color="text.primary" fontSize={64} fontWeight={700} my={2} textTransform='capitalize'>
           Why learn with Zummit Africa?
         </Typography>
