@@ -8,7 +8,7 @@ import { exampleText2 } from '../pages/example'
 const useStyles = makeStyles({
   whyZummit: {
     width: '100%',
-    padding: '1rem 3rem',
+    padding: '3.5rem 3rem',
     backgroundColor: 'var(--live-bg)',
   },
 })
