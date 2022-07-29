@@ -33,7 +33,7 @@ function AcaSecTwo() {
           sx={{
             fontSize: '20px'
           }}
-          color="text.secondary"
+          color="#5B6773"
         >
           Our data science course is designed to help you learn-by-doing with
           live classes <br /> taught by an industry expert, making you ready for
