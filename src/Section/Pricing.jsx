@@ -64,12 +64,12 @@ const Priciing = () => {
         </Typography> */}
         <Typography
           variant="h3"
-          textTransform="uppercase"
+          textTransform="capitalize"
           mb={4}
           sx={{
             alignSelf: 'center',
             color: '#ECF2FD',
-            fontWeight: '700'
+            fontWeight: '700',
           }}
         >
           Course Fee
@@ -281,8 +281,9 @@ const Priciing = () => {
             sx={{
               background: '#FFEA00',
               width: '150px',
-              height: '50px'
-              // padding: '6px 12px'
+              height: '50px',
+              // padding: '6px 12px',
+              color: "var(--color-primary)",
             }}
           >
             Enroll Now
