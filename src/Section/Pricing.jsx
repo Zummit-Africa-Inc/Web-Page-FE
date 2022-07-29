@@ -244,7 +244,7 @@ const Priciing = () => {
             paddingTop: '10px'
           }}
         >
-          <Button
+          <Button href='/payments'
             textTransform="uppercase"
             variant="contained"
             sx={{
