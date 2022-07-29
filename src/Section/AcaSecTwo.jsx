@@ -1,5 +1,4 @@
 import { Grid, Stack, Typography, Container } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { exampleText } from '../pages/example';
 import { Card } from '../components';
 
@@ -9,6 +8,9 @@ function AcaSecTwo() {
       className="bg-color"
       sx={{
         width: '100%',
+        minHeight: '100vh',
+        display: 'grid',
+        placeItems: 'center',
         padding: '10px 2px 100px 2px'
       }}
     >
