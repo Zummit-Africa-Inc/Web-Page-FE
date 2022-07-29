@@ -8,6 +8,31 @@ import {
 } from '@mui/material';
 import '../CSS/academyHeroBody.css';
 
+import { styled } from '@mui/material/styles';
+
+const StyledButton = styled(Button)`
+  background-color: '#FFEA00';
+  color: #fff;
+  &:hover {
+    background-color: #b9aa04;
+  }
+  &:focus {
+    background-color: #6e6500;
+  }
+`;
+
+const StyledButton2 = styled(Button)`
+  color: #ffea00;
+  &:hover {
+    border-color: #b9aa04;
+    color: #b9aa04;
+  }
+  &:focus {
+    border-color: #6e6500;
+    color: #6e6500;
+  }
+`;
+
 function AcademyHeroBody() {
   const theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.down('md'));
@@ -52,7 +77,8 @@ function AcademyHeroBody() {
                   }}
                 >
                   <Grid item>
-                    <Button href='/payments'
+                    <StyledButton
+                      href="/payments"
                       variant="contained"
                       sx={{
                         backgroundColor: '#FFEA00',
@@ -66,10 +92,10 @@ function AcademyHeroBody() {
                       }}
                     >
                       Enroll Now
-                    </Button>
+                    </StyledButton>
                   </Grid>
                   <Grid item>
-                    <Button
+                    <StyledButton2
                       variant="outlined"
                       sx={{
                         borderColor: '#081F4A',
@@ -82,7 +108,7 @@ function AcademyHeroBody() {
                       }}
                     >
                       Learn More
-                    </Button>
+                    </StyledButton2>
                   </Grid>
                 </Grid>
               </div>
@@ -130,7 +156,8 @@ function AcademyHeroBody() {
                 }}
               >
                 <Grid item>
-                  <Button href='/payments'
+                  <Button
+                    href="/payments"
                     variant="contained"
                     size="small"
                     sx={{
