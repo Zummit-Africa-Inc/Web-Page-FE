@@ -62,6 +62,7 @@ const PaystackIntegration = () => {
   const classes = useStyles()
   const [status, setStatus] = useState('');
   const [qualification, setQualification] = useState('');
+  const [amount, setAmount] = useState('')
   const [id, setId] = useState()
   const [courses, setCourses] = useState()
 
@@ -72,6 +73,7 @@ const PaystackIntegration = () => {
       try{
         const res = await axios.get(`${base_url}/course`)
         setCourses(res.data.data[0])
+        setAmount(res.data.data[0].price)
         setId(res.data.data[0].id)
       } catch(err) {
         
@@ -86,6 +88,8 @@ const PaystackIntegration = () => {
     const paystackPay = new PaystackPop()
     paystackPay.newTransaction({
       key: key,
+      amount: amount * 100,
+      currency: 'NGN',
       email,
       firstName,
       lastName,
@@ -112,6 +116,9 @@ const PaystackIntegration = () => {
 
   const handleChange = (event) => {
     setStatus(event.target.value);
+  };
+
+  const handleChanges = (event) => {
     setQualification(event.target.value);
   };
   
@@ -284,8 +291,8 @@ const PaystackIntegration = () => {
                     <TextField
                       label="LastName"
                       type="text"
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                     />
                 </Grid>
 
@@ -320,7 +327,7 @@ const PaystackIntegration = () => {
                         id="academic-qualification"
                         value={qualification}
                         label="Academic Qualification"
-                        onChange={handleChange}
+                        onChange={handleChanges}
                       >
                         <MenuItem value={10}>Bachelor's Degree</MenuItem>
                         <MenuItem value={20}>Masters Degree</MenuItem>
@@ -328,7 +335,7 @@ const PaystackIntegration = () => {
                     </FormControl>
                   </Box>
 
-                  <Button disableElevation disableRipple onClick={handlePay} fullWidth variant="contained"
+                  <Button disabled={ !firstName || !lastName || !email || !status || !qualification } Elevation disableRipple onClick={handlePay} fullWidth variant="contained"
                   sx={{
                       background: '#FFEA00',
                       height:'60px',
