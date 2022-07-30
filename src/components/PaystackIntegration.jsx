@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PaystackPop from '@paystack/inline-js'
-import { AppBar, Box, Button, Grid, Stack, TextField, Toolbar, Typography } from '@mui/material'
+import { Alert, AppBar, Box, Button, Grid, Stack, TextField, Toolbar, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import axios from 'axios'
 import Logo from '../Images/LOGO.png'
@@ -65,6 +65,7 @@ const PaystackIntegration = () => {
   const [amount, setAmount] = useState('')
   const [id, setId] = useState()
   const [courses, setCourses] = useState()
+  const [error, setError] = useState(null)
 
 
   useEffect(() => {
@@ -85,34 +86,46 @@ const PaystackIntegration = () => {
   const handlePay = (e) => {
     e.preventDefault()
 
-    const paystackPay = new PaystackPop()
-    paystackPay.newTransaction({
-      key: key,
-      amount: amount * 100,
-      currency: 'NGN',
-      email,
-      firstName,
-      lastName,
-      metadata: {
-        first_name: firstName,
-        last_name: lastName,
-        course_id: id
-      },
-      onClose: function () {
-        alert('closed window')
-      },
-      callback: async function (response) {
-        try {
-          const res = await axios.post(`${base_url}/payments/verification?ref=${response.reference}`, response.reference)
-         if (res.data.success) {
-          window.location.href = `/payments/verify/${response.reference}`
-         }
-        }catch (err) {
-          alert(err.message)
+    try{
+
+      
+      
+      const paystackPay = new PaystackPop()
+      paystackPay.newTransaction({
+        key: key,
+        amount: amount * 100,
+        currency: 'NGN',
+        email,
+        firstName,
+        lastName,
+        metadata: {
+          first_name: firstName,
+          last_name: lastName,
+          course_id: id
+        },
+        onClose: function () {
+          alert('Are you sure you want to close this window?')
+          setFirstName('')
+          setLastName('')
+          setEmail('')
+          setStatus('')
+          setQualification('')
+        },
+        callback: async function (response) {
+          try {
+            const res = await axios.post(`${base_url}/payments/verification?ref=${response.reference}`, response.reference)
+            if (res.data.success) {
+              window.location.href = `/payments/verify/${response.reference}`
+            }
+          }catch (err) {
+            alert(err.message)
+          }
         }
-      }
-    })
-  }
+      })
+    } catch(err) {
+      setError(err.message)
+    }
+    }
 
   const handleChange = (event) => {
     setStatus(event.target.value);
@@ -271,6 +284,10 @@ const PaystackIntegration = () => {
                 padding: '60px 31px',
               }}>
               <form>
+              {error && (
+        <Alert style={{ position: 'absolute', top: '10%', zIndex:3 }} severity='error'>
+            {error}
+        </Alert>)}
               <Grid
                     my={2}
                     sx={{
