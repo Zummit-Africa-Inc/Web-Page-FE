@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
 import PaystackPop from '@paystack/inline-js'
-import { AppBar, Box, Button, Grid, TextField, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Grid, Stack, TextField, Toolbar, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import axios from 'axios'
 import Logo from '../Images/LOGO.png'
 import { useEffect } from 'react'
 
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Divider from '@mui/material/Divider';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
+import { lineHeight } from '@mui/system'
 
 const useStyles = makeStyles({
   root: {
     position: 'absolute',
     width: '1200px',
     height: '800px',
-    left: '120px',
+    left: '40px',
+    right: '40px',
     top: '140px',
     background: '#081F4A',
     borderRadius: '40px',
@@ -52,8 +59,9 @@ const PaystackIntegration = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
-  const [amount, setAmount] = useState('')
   const classes = useStyles()
+  const [status, setStatus] = useState('');
+  const [qualification, setQualification] = useState('');
   const [id, setId] = useState()
   const [courses, setCourses] = useState()
 
@@ -64,7 +72,6 @@ const PaystackIntegration = () => {
       try{
         const res = await axios.get(`${base_url}/course`)
         setCourses(res.data.data[0])
-        setAmount(res.data.data[0].price)
         setId(res.data.data[0].id)
       } catch(err) {
         
@@ -79,7 +86,6 @@ const PaystackIntegration = () => {
     const paystackPay = new PaystackPop()
     paystackPay.newTransaction({
       key: key,
-      amount: amount * 100,
       email,
       firstName,
       lastName,
@@ -103,6 +109,13 @@ const PaystackIntegration = () => {
       }
     })
   }
+
+  const handleChange = (event) => {
+    setStatus(event.target.value);
+    setQualification(event.target.value);
+  };
+  
+
   return (
     <div> 
       <AppBar>
@@ -125,20 +138,22 @@ const PaystackIntegration = () => {
                 align="left"
                 sx={{
                   fontWeight: '700',
-                  color: '#ECF2FD'
+                  color: '#ECF2FD',
+                  lineHeight: '1',
                 }}
                 gutterBottom
               >
                Join our Data <br/> Science Live Online <br/> Course
             </Typography>
             <Typography
-                variant="h6"
+                variant="h4"
                 align="left"
                 paragraph
                 sx={{
                   fontWeight: '700',
                   color: '#ECF2FD',
-                  paddingBottom: '20px'
+                  paddingBottom: '20px',
+                  lineHeight: '1',
                 }}
               >
                $100
@@ -150,7 +165,8 @@ const PaystackIntegration = () => {
                 sx={{
                   fontWeight: '500',
                   color: '#ECF2FD',
-                  paddingBottom: '20px'
+                  paddingBottom: '20px',
+                  lineHeight: '1',
                 }}
               >
               6 Weeks
@@ -243,54 +259,94 @@ const PaystackIntegration = () => {
           </div>
 
           <Box className={classes.formBox}>
-            <Typography variant='h3' textAlign='center' sx={{ marginTop: '6rem' }} gutterBottom>Checkout Page</Typography>
-            <form>
-              <TextField
-                required
-                fullWidth
-                label="FirstName"
-                type="text"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                variant="filled"
-              />
-              <TextField
-                required
-                fullWidth
-                label="LastName"
-                type="text"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                variant="filled"
-              />
-              <TextField
-                required
-                fullWidth
-                label="Email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                variant="filled"
-              />
-              <TextField
-              disabled
-                required
-                fullWidth
-                label="Amount"
-                type="number"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                variant="filled"
-              />
-              <Button disableElevation disableRipple onClick={handlePay} fullWidth variant="contained"
-               sx={{
-                  background: '#FFEA00',
-                  color: 'black',
-                  borderRadius: '5px',
-                }}>
-                  ENROLL NOW
-                </Button>
-            </form>
+            <Stack
+                sx={{
+                padding: '60px 31px',
+              }}>
+              <form>
+              <Grid
+                    my={2}
+                    sx={{
+                      display: 'flex',
+                      alignSelf: 'center',
+                      justifyContent: 'space-between',
+                      width: '400px',
+                      paddingBottom: '10px',
+                      gridGap: 18,
+                    }}
+                  >
+                    <TextField
+                      label="First Name"
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                    />
+                    <TextField
+                      label="LastName"
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                    />
+                </Grid>
+
+                <Stack spacing={3}
+                    >
+                  <TextField
+                    label="Email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <Box sx={{ minWidth: 120 }}>
+                    <FormControl fullWidth>
+                      <InputLabel id="employment-status-label">Employment Status</InputLabel>
+                      <Select
+                        labelId="employment-status-label"
+                        id="employment-status"
+                        value={status}
+                        label="Employment Status"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={10}>Employed</MenuItem>
+                        <MenuItem value={20}>Unemployed</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Box>
+                  <Box sx={{ minWidth: 120 }}>
+                    <FormControl fullWidth>
+                      <InputLabel id="academic-qualification-label">Academic Qualification</InputLabel>
+                      <Select
+                        labelId="academic-qualification-label"
+                        id="academic-qualification"
+                        value={qualification}
+                        label="Academic Qualification"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={10}>Bachelor's Degree</MenuItem>
+                        <MenuItem value={20}>Masters Degree</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Box>
+
+                  <Button disableElevation disableRipple onClick={handlePay} fullWidth variant="contained"
+                  sx={{
+                      background: '#FFEA00',
+                      height:'60px',
+                      color: 'black',
+                      borderRadius: '5px',
+                      fontWeight: '400',
+                      fontSize: '20px',
+                      lineHeight: '150%'
+                    }}>
+                      ENROLL NOW
+                  </Button><br/><br/>
+                  <Divider variant="middle"  sx={{ mt: 3, ml: 1, mb: 1 }}/><br/>
+                  <Typography color="text.secondary" variant="body4">
+                    By clicking the "Enroll now" button, you are enroling in a Memorisely Bootcamp, and you agree to Zummit Afica Academy's <strong>Terms of Use</strong> and <strong>Privacy Policy</strong>.
+                  </Typography>
+                </Stack>
+              </form>
+            </Stack>
           </Box>
       </div>
     </div>
