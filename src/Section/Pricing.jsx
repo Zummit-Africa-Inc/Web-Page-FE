@@ -153,7 +153,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                600+ hours of coursework
+                6 real world projects
               </Typography>
             </Grid>
             <Grid
@@ -171,7 +171,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                4 real-world portfolio projects
+                Hands on course
               </Typography>
             </Grid>
             <Grid
@@ -189,7 +189,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                24 weeks part-time program
+                Support and Mentorship
               </Typography>
             </Grid>
             <Grid
@@ -207,7 +207,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                Mentorship with Industry experts
+                Interview Support
               </Typography>
             </Grid>
             <Grid
@@ -225,7 +225,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                12 months career assistance
+                Makes you career ready
               </Typography>
             </Grid>
             <Grid
@@ -243,7 +243,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                12 months career assistance
+                Full job and internship opportunities
               </Typography>
             </Grid>
             <Grid
@@ -260,7 +260,7 @@ const Priciing = () => {
                 }}
               />
               <Typography variant="subtitle1" color="#081F4A" fontWeight={400}>
-                14 days money back guarantee
+                8 hours a day Slack support
               </Typography>
             </Grid>
           </Grid>

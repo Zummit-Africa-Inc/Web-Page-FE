@@ -52,7 +52,7 @@ function AcademyHeroBody() {
                 }}
                 gutterBottom
               >
-                Learn Data <br /> Science With An <br /> Industry Expert.
+                Become a <br /> professional Data <br /> Scientist in 6 weeks
               </Typography>
               <Typography
                 variant="h6"
@@ -64,9 +64,10 @@ function AcademyHeroBody() {
                   paddingBottom: '20px'
                 }}
               >
-                Zummit Africa Academy would take you from zero to hero in Data
-                Science as you <br /> gain real life industry experience from an
-                industry expert.
+                Learn to use your coding knowledge to master a new trade. Have
+                your projects reviewed by our expert instructors.
+                <br /> Learn how to build AI-powered solutions, and develop the
+                necessary knowledge to get hired as a junior Data Scientist.
               </Typography>
               <div>
                 <Grid
@@ -129,7 +130,7 @@ function AcademyHeroBody() {
                 }}
                 gutterBottom
               >
-                Learn Data Science With An Industry Expert.
+                Become a professional Data Scientist in 6 weeks
               </Typography>
               <Typography
                 variant="h6"
@@ -141,9 +142,10 @@ function AcademyHeroBody() {
                   paddingBottom: '20px'
                 }}
               >
-                Zummit Africa Academy would take you from zero to hero in Data
-                Science as you gain real life industry experience from an
-                industry expert.
+                Learn to use your coding knowledge to master a new trade. Have
+                your projects reviewed by our expert instructors. Learn how to
+                build AI-powered solutions, and develop the necessary knowledge
+                to get hired as a junior Data Scientist.
               </Typography>
             </Container>
             <div>

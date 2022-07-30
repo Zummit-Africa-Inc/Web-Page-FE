@@ -105,10 +105,11 @@ const UpcomingSection = () => {
               color: '#ECF2FD'
             }}
           >
-            The next batch starts September, 2022 and is limited to 100 <br />{' '}
-            participants. Once we receive your application, we‘ll call you to{' '}
-            <br /> determine if the program is the right fit for you and discuss
-            how <br /> we can help you achieve your career goals.
+            The program starts in September 2022 and is open to all <br /> who
+            are willing to learn new skills and benefit from them. <br /> Once
+            we receive your application, we‘ll call you to <br /> determine if
+            the program is the right fit for you and discuss how <br /> we can
+            help you achieve your career goals.
           </Typography>
 
           <Stack direction="row" spacing={2} className="buttons">
