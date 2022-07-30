@@ -27,4 +27,12 @@
     .writingImage {
         display: none;
     }
+
+    .EllipsesTop {
+       display: none;
+    }
+    
+    .EllipsesBtm {
+        display: none;
+    }
 }
