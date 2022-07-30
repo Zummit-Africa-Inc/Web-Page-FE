@@ -8,6 +8,31 @@ import {
 } from '@mui/material';
 import '../CSS/academyHeroBody.css';
 
+import { styled } from '@mui/material/styles';
+
+const StyledButton = styled(Button)`
+  background-color: '#FFEA00';
+  color: #fff;
+  &:hover {
+    background-color: #b9aa04;
+  }
+  &:focus {
+    background-color: #6e6500;
+  }
+`;
+
+const StyledButton2 = styled(Button)`
+  color: #ffea00;
+  &:hover {
+    border-color: #b9aa04;
+    color: #b9aa04;
+  }
+  &:focus {
+    border-color: #6e6500;
+    color: #6e6500;
+  }
+`;
+
 function AcademyHeroBody() {
   const theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.down('md'));
@@ -52,32 +77,38 @@ function AcademyHeroBody() {
                   }}
                 >
                   <Grid item>
-                    <Button href='/payments'
+                    <StyledButton
+                      href="/payments"
                       variant="contained"
                       sx={{
                         backgroundColor: '#FFEA00',
                         borderRadius: '10px',
                         padding: '10px 20px',
                         color: '#000',
-                        fontSize: '20px'
+                        fontSize: '20px',
+                        boxShadow: '1px 2px 32px -3px rgba(0,0,0,0.75)',
+                        textTransform: 'capitalize',
+                        fontWeight: 500
                       }}
                     >
                       Enroll Now
-                    </Button>
+                    </StyledButton>
                   </Grid>
                   <Grid item>
-                    <Button
+                    <StyledButton2
                       variant="outlined"
                       sx={{
                         borderColor: '#081F4A',
                         borderRadius: '10px',
                         color: '#081F4A',
                         padding: '10px 20px',
-                        fontSize: '20px'
+                        fontSize: '20px',
+                        textTransform: 'capitalize',
+                        fontWeight: 500
                       }}
                     >
                       Learn More
-                    </Button>
+                    </StyledButton2>
                   </Grid>
                 </Grid>
               </div>
@@ -125,14 +156,18 @@ function AcademyHeroBody() {
                 }}
               >
                 <Grid item>
-                  <Button href='/payments'
+                  <Button
+                    href="/payments"
                     variant="contained"
                     size="small"
                     sx={{
                       backgroundColor: '#FFEA00',
                       borderRadius: '10px',
                       padding: '10px 20px',
-                      color: '#000'
+                      color: '#000',
+                      boxShadow: '1px 2px 32px -3px rgba(0,0,0,0.75)',
+                      textTransform: 'capitalize',
+                      fontWeight: 500
                     }}
                   >
                     Enroll Now
@@ -146,7 +181,9 @@ function AcademyHeroBody() {
                       borderColor: '#081F4A',
                       borderRadius: '10px',
                       color: '#081F4A',
-                      padding: '10px 20px'
+                      padding: '10px 20px',
+                      textTransform: 'capitalize',
+                      fontWeight: 500
                     }}
                   >
                     Learn More

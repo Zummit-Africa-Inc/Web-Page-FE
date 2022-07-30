@@ -8,24 +8,27 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
+import Logo from '../Images/acaLogo.png';
+
 const useStyles = makeStyles({
   footer: {
     width: '100%',
-    padding: '40px 120px',
-    backgroundColor: '#fff'
+    padding: '40px 120px 40px 80px',
+    backgroundColor: 'rgba(255, 255, 255, 0.7);'
   },
   conOne: {
     display: 'flex',
-    marginBottom: '90px',
-    justifyContent: 'space-between',
+    marginBottom: '40px',
+    // justifyContent: 'space-around',
     flexWrap: 'wrap'
   },
   conTwo: {
     display: 'flex',
-    marginTop: '45px',
-    marginBottom: '50px',
+    marginTop: '30px',
+    marginBottom: '40px',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    alignItems: 'center'
   }
 });
 
@@ -123,7 +126,8 @@ function AcaFooter() {
               sx={{
                 background: '#081F4A',
                 borderRadius: '0px 15px 15px 0px',
-                height: '56px'
+                height: '56px',
+                marginBottom: '5px'
               }}
             >
               Subscribe
@@ -133,7 +137,7 @@ function AcaFooter() {
       </Grid>
       <Grid
         sx={{
-          width: '80%',
+          width: '100%',
           background: '#061738',
           height: '5px',
           opacity: '0.7',
@@ -164,18 +168,29 @@ function AcaFooter() {
             Nigeria
           </Typography>
         </Grid>
-        <Grid>
-          <Typography
-            variant="h6"
-            fontWeight={500}
-            color="#081F4A"
-            my={2}
-            textTransform="uppercase"
+        <Grid
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column'
+          }}
+        >
+          <Grid
+            sx={{
+              width: '167px',
+              alignSelf: 'center'
+            }}
           >
-            Logo
-          </Typography>
-          <Typography variant="subtitle2" color="#081F4A">
-            © 2021 Zummit Africa
+            <img src={Logo} />
+          </Grid>
+          <Typography
+            variant="subtitle2"
+            color="#081F4A"
+            sx={{
+              alignSelf: 'center'
+            }}
+          >
+            © 2022 Zummit Africa Academy
           </Typography>
         </Grid>
         <Grid

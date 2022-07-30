@@ -1,5 +1,4 @@
 import { Grid, Stack, Typography, Container } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { exampleText } from '../pages/example';
 import { Card } from '../components';
 
@@ -9,14 +8,14 @@ function AcaSecTwo() {
       className="bg-color"
       sx={{
         width: '100%',
-        padding: '10px 2px 100px 2px'
+        minHeight: '100vh',
+        display: 'grid',
+        placeItems: 'center',
+        padding: '10px 2px 100px 2px',
+        background: 'rgba(255, 255, 255, 0.4)'
       }}
     >
       <Container align="center">
-        <Typography variant="subtitle1" my={2} textTransform="uppercase">
-          Online Live Classes
-        </Typography>
-
         <Typography
           variant="h2"
           textTransform="capitalize"
@@ -34,6 +33,7 @@ function AcaSecTwo() {
           sx={{
             fontSize: '20px'
           }}
+          color="#5B6773"
         >
           Our data science course is designed to help you learn-by-doing with
           live classes <br /> taught by an industry expert, making you ready for

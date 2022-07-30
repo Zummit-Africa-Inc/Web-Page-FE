@@ -8,7 +8,7 @@ import { exampleText2 } from '../pages/example'
 const useStyles = makeStyles({
   whyZummit: {
     width: '100%',
-    padding: '10px 40px',
+    padding: '3.5rem 3rem',
     backgroundColor: 'var(--live-bg)',
   },
 })
@@ -18,16 +18,13 @@ const AcadWhyZummit = () => {
 
   return (
     <Stack className={classes.whyZummit}>
-        <Typography variant='subtitle1' my={2} textTransform='uppercase'>
-          What makes us unique
-        </Typography>
-
-        <Typography variant='h2' fontWeight={500} my={2} textTransform='capitalize'>
+        <Typography variant='h2' color="text.primary" fontSize={64} fontWeight={700} my={2} textTransform='capitalize'>
           Why learn with Zummit Africa?
         </Typography>
 
-        <Typography variant='subtitle2' my={2}>
-          Our data science course is designed to help you learn-by-doing with live classes taught by an industry expert, making you ready for work as a Data Scientist.
+        <Typography variant='body1' fontSize={20} fontWeight={400} color="text.secondary" mt={4} mb={12}>
+          Our data science course is designed to help you learn-by-doing with live classes <br />
+          taught by an industry expert, making you ready for work as a Data Scientist.
         </Typography>
         <Grid container spacing={4}>
           {exampleText2.map(text => (
