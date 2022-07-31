@@ -52,7 +52,7 @@ function AcademyHeroBody() {
                 }}
                 gutterBottom
               >
-                Become a <br /> professional Data <br /> Scientist in 6 weeks
+                Become a Professional <br /> Data Scientist in 6 weeks
               </Typography>
               <Typography
                 variant="h6"
@@ -64,10 +64,8 @@ function AcademyHeroBody() {
                   paddingBottom: '20px'
                 }}
               >
-                Learn to use your coding knowledge to master a new trade. Have
-                your projects reviewed by our expert instructors.
-                <br /> Learn how to build AI-powered solutions, and develop the
-                necessary knowledge to get hired as a junior Data Scientist.
+               Master a new trade, Learn from our top instructors,
+                <br /> Build AI-powered solutions, and get hired as a junior Data Scientist.
               </Typography>
               <div>
                 <Grid

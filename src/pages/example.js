@@ -2,7 +2,7 @@ export const exampleText = [
   {
     id: 1,
     title: 'Build Your Portfolio',
-    text: `If you're interested in building your own apps, attending this course will help you to create a portfolio that demonstrates your skills and make it easier for you to get your dream job.`
+    text: `Attend this course, create a portfolio that demonstrates your skills and makes it easier to land your dream job.`
   },
   {
     id: 2,
@@ -24,13 +24,13 @@ export const exampleText2 = [
   },
   {
     id: 2,
-    title: 'Learn with Professionals',
-    text: 'Learn from an industry expert and get mentored by professionals in the data science field.'
+    title: 'Professional Tutors',
+    text: 'Learn from industry experts and get mentored by professionals in the field.'
   },
   {
     id: 3,
-    title: 'Build industry projects',
-    text: 'Learn how to build real-life industry projects after six weeks with your newly acquired skills.'
+    title: 'Real life projects',
+    text: 'Build real-life projects after six weeks with your newly acquired skills.'
   },
   {
     id: 4,
