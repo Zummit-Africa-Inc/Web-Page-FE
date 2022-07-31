@@ -49,7 +49,7 @@ const useStyles = makeStyles({
     padding: '60px 31px',
     '@media screen and (max-width: 800px)': {
       width: 'fit-content',
-      height: 'fit-content'
+      height: 'fit-content',
     }
   },
   form: {
@@ -295,9 +295,13 @@ const PaystackIntegration = () => {
                     display: 'flex',
                     alignSelf: 'center',
                     justifyContent: 'space-between',
-                    // width: '400px',
                     paddingBottom: '10px',
                     gridGap: 18,
+                    '@media screen and (max-width: 800px)': {
+                      flexDirection: 'column',
+                      paddingBottom: '0',
+                    gridGap: 18,
+                    }
                   }}
                 >
                   <TextField
