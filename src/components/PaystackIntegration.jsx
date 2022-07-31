@@ -63,19 +63,19 @@ const PaystackIntegration = () => {
   const [status, setStatus] = useState('');
   const [qualification, setQualification] = useState('');
   const [amount, setAmount] = useState('')
-  const [id, setId] = useState()
   const [courses, setCourses] = useState()
   const [error, setError] = useState(null)
+
+  const id = process.env.REACT_APP_COURSE_ID
 
 
   useEffect(() => {
     const getCourse = async () => {
 
       try{
-        const res = await axios.get(`${base_url}/course`)
-        setCourses(res.data.data[0])
-        setAmount(res.data.data[0].price)
-        setId(res.data.data[0].id)
+        const res = await axios.get(`${base_url}/course/${id}`)
+        setCourses(res.data.data)
+        setAmount(res.data.data.price)
       } catch(err) {
         
       }
@@ -333,6 +333,9 @@ const PaystackIntegration = () => {
                       >
                         <MenuItem value={10}>Employed</MenuItem>
                         <MenuItem value={20}>Unemployed</MenuItem>
+                        <MenuItem value={30}>Student</MenuItem>
+                        <MenuItem value={40}>Self-Employed</MenuItem>
+                        <MenuItem value={50}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -346,13 +349,14 @@ const PaystackIntegration = () => {
                         label="Academic Qualification"
                         onChange={handleChanges}
                       >
-                        <MenuItem value={10}>Bachelor's Degree</MenuItem>
-                        <MenuItem value={20}>Masters Degree</MenuItem>
+                        <MenuItem value={10}>Under-Graduate</MenuItem>
+                        <MenuItem value={20}>Graduate</MenuItem>
+                        <MenuItem value={30}>Post-Graduate</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
 
-                  <Button disabled={ !firstName || !lastName || !email || !status || !qualification } Elevation disableRipple onClick={handlePay} fullWidth variant="contained"
+                  <Button disabled={ !firstName || !lastName || !email || !status || !qualification } disableElevation disableRipple onClick={handlePay} fullWidth variant="contained"
                   sx={{
                       background: '#FFEA00',
                       height:'60px',
