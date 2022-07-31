@@ -12,32 +12,34 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Divider from '@mui/material/Divider';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
-import { lineHeight } from '@mui/system'
 
 const useStyles = makeStyles({
   root: {
-    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container: {
+    position: 'relative',
+   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
     width: '1200px',
     height: '800px',
-    left: '40px',
-    right: '40px',
-    top: '140px',
+    marginTop: '8rem',
+    padding: '2rem 2rem',
     background: '#081F4A',
     borderRadius: '40px',
+    '@media screen and (max-width: 800px)': {
+      flexDirection: 'column',
+      height: 'max-content',
+      gap: '2rem'
+    }
   },
   leftPane: {
-    position: 'absolute',
     lineHeight: '30px',
-    left: '102px',
-    top: '120px',
   },
   formBox: {
-    position: 'absolute',
     width: '470px',
     height: '680px',
-    right: '50px',
-    top: '50px',
-    bottom: '50px',
     background: 'linear-gradient(0deg, #C5D7F9, #C5D7F9), #C5D7F9',
     borderRadius: '40px',
   },
@@ -87,9 +89,6 @@ const PaystackIntegration = () => {
     e.preventDefault()
 
     try{
-
-      
-      
       const paystackPay = new PaystackPop()
       paystackPay.newTransaction({
         key: key,
@@ -137,7 +136,7 @@ const PaystackIntegration = () => {
   
 
   return (
-    <div> 
+    <>
       <AppBar>
         <Toolbar
           sx={{
@@ -149,9 +148,10 @@ const PaystackIntegration = () => {
           <img src={Logo} alt="zummit-logo" />
         </Toolbar>
       </AppBar>
+    <div className={classes.root}> 
 
 
-      <div className={classes.root}>
+      <div className={classes.container}>
           <div className={classes.leftPane}>
             <Typography
                 variant="h2"
@@ -368,7 +368,7 @@ const PaystackIntegration = () => {
                     }}>
                       ENROLL NOW
                   </Button><br/><br/>
-                  <Divider variant="middle"  sx={{ mt: 3, ml: 1, mb: 1 }}/><br/>
+                  <Divider variant="middle"  sx={{ ml: 1, mb: 1 }}/><br/>
                   <Typography color="text.secondary" variant="body4">
                     By clicking the "Enroll now" button, you are enroling in a Memorisely Bootcamp, and you agree to Zummit Afica Academy's <strong>Terms of Use</strong> and <strong>Privacy Policy</strong>.
                   </Typography>
@@ -378,6 +378,7 @@ const PaystackIntegration = () => {
           </Box>
       </div>
     </div>
+                  </>
   )
 }
 
