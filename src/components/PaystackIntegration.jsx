@@ -95,39 +95,38 @@ const PaystackIntegration = () => {
     e.preventDefault()
 
     try {
-      alert('Payment coming soon')
-      // const paystackPay = new PaystackPop()
-      // paystackPay.newTransaction({
-      //   key: key,
-      //   amount: amount * 100,
-      //   currency: 'NGN',
-      //   email,
-      //   firstName,
-      //   lastName,
-      //   metadata: {
-      //     first_name: firstName,
-      //     last_name: lastName,
-      //     course_id: id
-      //   },
-      //   onClose: function () {
-      //     alert('Are you sure you want to close this window?')
-      //     setFirstName('')
-      //     setLastName('')
-      //     setEmail('')
-      //     setStatus('')
-      //     setQualification('')
-      //   },
-      //   callback: async function (response) {
-      //     try {
-      //       const res = await axios.post(`${base_url}/payments/verification?ref=${response.reference}`, response.reference)
-      //       if (res.data.success) {
-      //         window.location.href = `/payments/verify/${response.reference}`
-      //       }
-      //     } catch (err) {
-      //       alert(err.message)
-      //     }
-      //   }
-      // })
+      const paystackPay = new PaystackPop()
+      paystackPay.newTransaction({
+        key: key,
+        amount: amount * 100,
+        currency: 'NGN',
+        email,
+        firstName,
+        lastName,
+        metadata: {
+          first_name: firstName,
+          last_name: lastName,
+          course_id: id
+        },
+        onClose: function () {
+          alert('Are you sure you want to close this window?')
+          setFirstName('')
+          setLastName('')
+          setEmail('')
+          setStatus('')
+          setQualification('')
+        },
+        callback: async function (response) {
+          try {
+            const res = await axios.post(`${base_url}/payments/verification?ref=${response.reference}`, response.reference)
+            if (res.data.success) {
+              window.location.href = `/payments/verify/${response.reference}`
+            }
+          } catch (err) {
+            alert(err.message)
+          }
+        }
+      })
     } catch (err) {
       setError(err.message)
     }
